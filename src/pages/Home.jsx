@@ -45,7 +45,7 @@ function HeroSection() {
                     <a href="https://uin-malang.ac.id/" target="_blank" rel="noopener noreferrer" className="hero-uni-link">
                         <strong>Maliki Islamic University</strong>
                     </a>{' '}
-                    in Malang with a <span className="text-highlight" style={{ fontSize: '0.9em' }}>GPA of 3.83</span>. I specialized in and developed skills in{' '}
+                    in Malang with a <span className="text-accent font-bold" style={{ fontSize: '1.1em' }}>GPA of 3.83</span>. I specialized in and developed skills in{' '}
                     <strong className="text-highlight">digital marketing</strong>, particularly in{' '}
                     <strong className="text-highlight">SEO</strong>,{' '}
                     <strong className="text-highlight">copywriting</strong>,{' '}

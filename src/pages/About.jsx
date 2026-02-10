@@ -93,10 +93,12 @@ function AboutOrgVolunteer() {
                         <div key={i} className="tl-item">
                             <div className={`tl-dot ${exp.active ? 'active' : ''}`}></div>
                             <div className="tl-content">
-                                {/* Ensure years are orange (accent) via CSS class or inline style if needed */}
+                                {/* Handle array descriptions for Org Exp too */}
                                 <span className={`tl-year ${exp.active ? 'active' : ''}`} style={{ color: 'var(--accent)' }}>{exp.period}</span>
                                 <h3 className="tl-role">{exp.title}</h3>
-                                <p className="tl-desc">{exp.desc}</p>
+                                {(Array.isArray(exp.desc) ? exp.desc : [exp.desc]).map((paragraph, pi) => (
+                                    <p key={pi} className="tl-desc">{paragraph}</p>
+                                ))}
                             </div>
                         </div>
                     ))}
@@ -115,7 +117,7 @@ function AboutEducation() {
             backgroundAttachment: 'fixed'
         }}>
             <div className="section-container">
-                <div className="education-card" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85))' }}>
+                <div className="education-card">
                     <div className="education-badge">
                         <GraduationCap size={32} />
                     </div>

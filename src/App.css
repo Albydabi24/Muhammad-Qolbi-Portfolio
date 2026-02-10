@@ -28,8 +28,8 @@
     --text-primary: #0a0a0a;
     --text-secondary: #14213d;
     /* ─── Variables Update ─── */
-    --text-muted: #334155;
-    /* Solid slate color for better contrast */
+    --text-muted: #1e293b;
+    /* Darker slate for better light-mode contrast */
     --text-secondary: #0f172a;
     /* Darker navy/black */
 
@@ -139,21 +139,22 @@ ul {
 .text-highlight {
     color: var(--accent);
     font-weight: 700;
-    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.12), rgba(var(--accent-rgb), 0.05));
-    padding: 0.1em 0.4em;
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.15), rgba(var(--accent-rgb), 0.06));
+    padding: 0.15em 0.5em;
     border-radius: 4px !important;
-    /* Force Boxy */
+    /* Force Boxy — NO circle */
     display: inline;
 }
 
 /* ─── CTA Spotlight Refinements ─── */
 .cta-spotlight {
-    background: linear-gradient(135deg, #020202 0%, #0a0a0a 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    background: linear-gradient(135deg, var(--accent), #c44a20) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 [data-theme="dark"] .cta-spotlight {
-    background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%) !important;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+    border: 1px solid rgba(var(--accent-rgb), 0.3) !important;
 }
 
 /* ─── Hall of Fame Refinements ─── */
@@ -218,9 +219,11 @@ ul {
     margin-bottom: 1.8rem;
     color: var(--text-primary);
     font-style: normal !important;
-    background: none !important;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    outline: none !important;
+    backdrop-filter: none !important;
     padding: 0 !important;
 }
 
@@ -489,10 +492,10 @@ ul {
 
 .gpa-badge {
     display: inline-block;
-    background: var(--accent);
-    color: #fff;
-    padding: 0.15rem 0.7rem;
-    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.15), rgba(var(--accent-rgb), 0.06));
+    color: var(--accent);
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
     font-weight: 800;
     font-size: 0.95em;
 }
@@ -1411,10 +1414,10 @@ ul {
 .tag {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background: rgba(var(--accent-rgb), 0.15);
+    background: rgba(var(--accent-rgb), 0.18);
     color: var(--accent);
     border-radius: 4px;
-    border: 1px solid rgba(var(--accent-rgb), 0.2);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -1578,7 +1581,7 @@ ul {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    background: linear-gradient(135deg, var(--navy) 0%, #1e3054 100%);
+    background: linear-gradient(135deg, #14213d 0%, #1e3054 100%) !important;
     border-radius: var(--radius-lg);
     padding: 4rem 3rem;
     color: #fff;
@@ -1588,7 +1591,7 @@ ul {
 }
 
 [data-theme="dark"] .education-card {
-    background: var(--bg-card);
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
     border: 2px solid var(--border-color);
 }
 
@@ -1624,16 +1627,12 @@ ul {
     margin-bottom: 0.5rem;
 }
 
-[data-theme="light"] .education-label {
-    color: rgba(10, 10, 10, 0.7);
-}
-
 .education-title {
     font-size: clamp(1.6rem, 3.5vw, 2.4rem);
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 2.5rem;
-    color: #fff;
+    color: #fff !important;
 }
 
 .education-stats {
@@ -1719,11 +1718,12 @@ ul {
 }
 
 .hof-placeholder span {
-    color: rgba(255, 255, 255, 0.12);
+    color: var(--text-primary);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 1rem;
+    opacity: 0.7;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -2381,12 +2381,13 @@ ul {
 
 /* ─── CTA Refinements ─── */
 .cta-spotlight {
-    background: var(--navy) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: linear-gradient(135deg, var(--accent), #c44a20) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 [data-theme="dark"] .cta-spotlight {
-    background: #050505 !important;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+    border: 1px solid rgba(var(--accent-rgb), 0.3) !important;
 }
 
 .cta-box-content {
@@ -2441,9 +2442,10 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-muted);
+    color: var(--text-primary);
     font-weight: 700;
-    background: var(--platinum);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
 }
 
 /* Fake Aspect Ratios via height */

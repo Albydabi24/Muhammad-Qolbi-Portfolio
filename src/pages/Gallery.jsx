@@ -22,13 +22,14 @@ function GalleryHero() {
     return (
         <header className="gallery-hero">
             <div className="gallery-hero-content container">
-                <SplitText tag="h1" className="gallery-title" text="Gallery" />
+                <SplitText tag="h1" className="gallery-hero-title" text="Gallery" delay={40} />
                 <div style={{ marginTop: '1rem' }}>
                     <SplitText
                         tag="p"
-                        className="gallery-desc"
+                        className="gallery-hero-subtitle"
                         text="A collection of my creative works and moments."
-                        style={{ fontSize: '1.2rem', color: 'var(--text-secondary)' }}
+                        style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', fontWeight: 500 }}
+                        delay={40}
                     />
                 </div>
                 <div className="scroll-indicator" style={{ marginTop: '2rem' }}>
