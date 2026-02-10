@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact — OBI Digital Marketing</title>
+    <meta name="description"
+        content="Hubungi Obi untuk layanan digital marketing, SEO, copywriting, dan social media management.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">OBI.</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <a href="contact.html" class="nav-cta">Hire Me</a>
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- GET IN TOUCH -->
+    <section class="contact-hero">
+        <div class="section-container">
+            <h1 class="contact-main-title fade-in">Get In Touch</h1>
+
+            <div class="contact-grid">
+                <!-- Left: Contact Info -->
+                <div class="contact-info fade-in-left">
+                    <h2 class="contact-info-title">Hubungi</h2>
+                    <div class="contact-channels">
+                        <a href="mailto:hello@obidigital.com" class="contact-channel">
+                            <div class="channel-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="channel-detail">
+                                <span class="channel-label">Email</span>
+                                <span class="channel-value">hello@obidigital.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+62812XXXXXXXX" class="contact-channel">
+                            <div class="channel-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="channel-detail">
+                                <span class="channel-label">Phone</span>
+                                <span class="channel-value">+62 812 XXXX XXXX</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/62812XXXXXXXX" target="_blank" class="contact-channel">
+                            <div class="channel-icon">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <div class="channel-detail">
+                                <span class="channel-label">WhatsApp</span>
+                                <span class="channel-value">+62 812 XXXX XXXX</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="contact-form-wrapper fade-in-right">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" placeholder="Tentang apa?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tulis pesanmu di sini..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <span>Kirim Pesan</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION + MAP -->
+    <section class="location-section">
+        <div class="section-container">
+            <div class="location-grid">
+                <!-- Left: Location Info -->
+                <div class="location-info fade-in-left">
+                    <h2 class="location-title">Location</h2>
+                    <div class="location-details">
+                        <div class="location-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Jl. Kramat P. Syarief No. 32 RT/RW 001/008</span>
+                        </div>
+                        <div class="location-item">
+                            <i data-lucide="building-2"></i>
+                            <span>Kelurahan Lubang Buaya, Kecamatan Cipayung</span>
+                        </div>
+                        <div class="location-item">
+                            <i data-lucide="navigation"></i>
+                            <span>Jakarta Timur, DKI Jakarta, 13810</span>
+                        </div>
+                        <div class="location-item">
+                            <i data-lucide="globe"></i>
+                            <span class="text-accent font-bold">Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Map Embed -->
+                <div class="location-map fade-in-right">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8168!2d106.897!3d-6.341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjAnMjguMCJTIDEwNsKwNTMnNDkuMCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Lokasi OBI">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-left">
+                    <div class="footer-logo">OBI.</div>
+                    <nav class="footer-nav">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@obidigital.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+62 812 XXXX XXXX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-address-card">
+                        <i data-lucide="map-pin" class="footer-address-icon"></i>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>
+                                Jl. Kramat P. Syarief No. 32 RT/RW 001/008<br>
+                                Kelurahan Lubang Buaya Kecamatan Cipayung<br>
+                                Jakarta Timur, DKI Jakarta<br>
+                                Kota Jakarta Timur, Dki jakarta, 13810<br>
+                                <span class="text-accent font-bold">INDONESIA</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OBI. All Rights Reserved.</p>
+                <div class="footer-socials">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Dribbble</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

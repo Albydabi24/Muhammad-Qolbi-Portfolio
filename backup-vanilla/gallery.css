@@ -1,0 +1,233 @@
+/* ═══════════════════════════════════════════════════════
+   GALLERY PAGE — Styles
+   ═══════════════════════════════════════════════════════ */
+
+/* ─── Gallery Hero ─── */
+.gallery-hero {
+    padding: 10rem 1.5rem 4rem;
+    background: var(--white);
+    position: relative;
+}
+
+.gallery-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.gallery-hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.gallery-hero-image {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: none;
+    position: relative;
+}
+
+.gallery-hero-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    background: linear-gradient(135deg, var(--navy) 0%, #1e3054 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.x-mark {
+    opacity: 0.3;
+}
+
+/* Custom cursor */
+.gallery-cursor {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-cursor.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ─── HOLALA Grid ─── */
+.holala-section {
+    padding: 6rem 1.5rem;
+    background: var(--white);
+}
+
+.holala-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.holala-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.holala-item:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-lg);
+    z-index: 2;
+}
+
+.holala-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, var(--navy) 0%, #263d5c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.holala-item:hover .holala-placeholder {
+    background: linear-gradient(135deg, var(--accent) 0%, #d4491a 100%);
+}
+
+/* ─── OPAPA Carousel ─── */
+.opapa-section {
+    padding: 6rem 1.5rem;
+    background: var(--platinum);
+}
+
+.opapa-carousel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.opapa-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.opapa-arrow:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+}
+
+.opapa-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.opapa-track {
+    display: flex;
+    gap: 1.2rem;
+    overflow: hidden;
+    flex: 1;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.opapa-slide {
+    flex: 0 0 calc(33.333% - 0.8rem);
+    scroll-snap-align: start;
+    transition: var(--transition);
+}
+
+.opapa-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 2px solid rgba(20, 33, 61, 0.08);
+    transition: var(--transition);
+}
+
+.opapa-slide:hover .opapa-placeholder {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+    .opapa-slide {
+        flex: 0 0 calc(50% - 0.6rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-hero {
+        padding: 9rem 1.5rem 3rem;
+    }
+
+    .gallery-hero-placeholder {
+        aspect-ratio: 16 / 10;
+    }
+
+    .gallery-cursor {
+        display: none;
+    }
+
+    .holala-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .opapa-slide {
+        flex: 0 0 calc(80% - 0.6rem);
+    }
+
+    .opapa-arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .holala-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+    }
+
+    .opapa-slide {
+        flex: 0 0 85%;
+    }
+}
