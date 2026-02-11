@@ -86,17 +86,17 @@ function AboutProblem() {
                     </GlareCard>
                 </div>
                 <div className="about-problem-text">
-                    <h2 className="about-problem-title">Penjualanmu tidak meningkat?</h2>
+                    <h2 className="about-problem-title">Your sales is not growing?</h2>
                     {/* Fixed Typography Case */}
-                    <p className="about-problem-subtitle" style={{ textTransform: 'none' }}>Bisa jadi itu karena :</p>
+                    <p className="about-problem-subtitle" style={{ textTransform: 'none' }}>It could be because:</p>
                     <ul className="about-problem-list">
-                        <li><span className="bullet"></span> Deskripsi product yang bertele-tele</li>
-                        <li><span className="bullet"></span> CTA yang tidak kuat</li>
-                        <li><span className="bullet"></span> Storytelling yang kaku</li>
-                        <li><span className="bullet"></span> Tagline yang kurang deskriptif</li>
+                        <li><span className="bullet"></span> Wordy product descriptions</li>
+                        <li><span className="bullet"></span> Weak CTAs</li>
+                        <li><span className="bullet"></span> Rigid storytelling</li>
+                        <li><span className="bullet"></span> Undescriptive taglines</li>
                     </ul>
                     <blockquote className="about-problem-quote">
-                        "Mengenalku lebih jauh mungkin bisa jadi <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>solusi yang tepat untukmu</span>"
+                        "Getting to know me better might be the <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>right solution for you</span>"
                     </blockquote>
                 </div>
             </div>
@@ -109,7 +109,7 @@ function SkillsSection() {
     return (
         <section className="section skills-section" id="skills">
             <div className="section-container">
-                <h2 className="section-title">Skill Yang Aku Miliki</h2>
+                <h2 className="section-title">My Skills</h2>
                 <div className="skills-grid">
                     {skills.map((skill, i) => (
                         <GlareCard key={i}>
@@ -158,7 +158,9 @@ function ExperienceSection() {
                 <div className="experience-header">
                     <h2 className="experience-title">Work</h2>
                     <p className="experience-subtitle">— experience</p>
-                    <p className="experience-desc">Aku memiliki berbagai pengalaman di berbagai bidang yang sesuai dengan kebutuhanmu.</p>
+                    <p className="experience-desc">
+                        I possess diverse experience across various fields tailored to your needs. This is all proof that I am very serious about developing my potential in various things and trying to show the best results that I can
+                    </p>
                 </div>
                 <div className="experience-timeline">
                     <div className="timeline-line"></div>
@@ -171,7 +173,7 @@ function ExperienceSection() {
                                 {(Array.isArray(exp.desc) ? exp.desc : [exp.desc]).map((paragraph, pi) => (
                                     <p key={pi} className="timeline-desc">{paragraph}</p>
                                 ))}
-                                <Carousel slides={3} />
+                                <Carousel slides={7} />
                             </div>
                         </div>
                     ))}
@@ -251,7 +253,7 @@ function TestimonialsSection() {
         <section className="testimonials-section" id="testimonials">
             <div className="section-container">
                 <div className="testimonials-header">
-                    <h2 className="section-title-light">What they Said About Me</h2>
+                    <h2 className="section-title-light">What They Say About Me</h2>
                     <div className="testimonials-nav">
                         <button className="testi-arrow" onClick={handlePrev} aria-label="Previous">
                             <ChevronLeft size={22} />
@@ -332,7 +334,7 @@ function CTASection() {
                     <div className="cta-box-content">
                         <div className="cta-text">
                             <h2>Let's work together</h2>
-                            <p>Siap meningkatkan performa digital marketing bisnismu?</p>
+                            <p>Ready to boost your business's digital marketing performance?</p>
                         </div>
                         <Link to="/contact" className="btn-cta">Contact Me</Link>
                     </div>

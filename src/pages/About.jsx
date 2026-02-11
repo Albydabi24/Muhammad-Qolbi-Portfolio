@@ -3,7 +3,8 @@ import { User, Briefcase, GraduationCap, Award, MapPin, Mail, Phone } from 'luci
 import { Link } from 'react-router-dom'
 import SplitText from '../components/SplitText'
 import GlareCard from '../components/GlareCard'
-import { experiences, organizationExperiences } from '../data'
+import Carousel from '../components/Carousel'
+import { experiences, organizationExperiences, freelanceExperiences } from '../data'
 
 const DUMMY_IMG = 'https://upload.wikimedia.org/wikipedia/en/f/f8/Dummy_Title_Card.jpeg'
 const EDUCATION_BG = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR34Rw1Xujje5f4RuQevoYSNf8nI5EH-bgaDg&s'
@@ -14,6 +15,7 @@ export default function About() {
             <AboutHero />
             <AboutWorkExperience />
             <AboutOrgVolunteer />
+            <AboutFreelance />
             <AboutEducation />
             <HallOfFame />
         </>
@@ -30,8 +32,7 @@ function AboutHero() {
                         <span className="text-accent">I am Obi</span>
                     </h1>
                     <p className="about-hero-desc">
-                        Fresh graduate dari program studi Ilmu Perpustakaan dan Sains Informasi, UIN Maulana Malik Ibrahim Malang.
-                        Passionate di bidang digital marketing, SEO, copywriting, dan social media management.
+                        I am a graduate of the Bachelor of Library and Information Science program from Maulana Malik Ibrahim State Islamic University in Malang with a GPA of 3.83. During my studies, I specialized in and developed skills in digital marketing, particularly in SEO, copywriting, and social media marketing.
                     </p>
                     <div className="about-hero-tags">
                         <span className="tag">Digital Marketing</span>
@@ -53,24 +54,50 @@ function AboutHero() {
 }
 
 function AboutWorkExperience() {
+    const sectionRef = useRef(null)
+
+    useEffect(() => {
+        if (!sectionRef.current) return
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view')
+                        observer.unobserve(entry.target)
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+        )
+        const elements = sectionRef.current.querySelectorAll('.fade-up-element, .timeline-dot')
+        elements.forEach(el => observer.observe(el))
+        return () => observer.disconnect()
+    }, [])
+
     return (
-        <section className="about-timeline-section">
+        <section className="about-timeline-section" ref={sectionRef}>
             <div className="section-container">
                 <div className="about-section-header">
                     <h2 className="about-section-title">Work<br /><span className="text-accent">Experience</span></h2>
                 </div>
-                <div className="about-timeline">
-                    <div className="tl-line"></div>
+                <div className="experience-timeline">
+                    <div className="timeline-line"></div>
                     {experiences.map((exp, i) => (
-                        <div key={i} className="tl-item">
-                            <div className={`tl-dot ${exp.active ? 'active' : ''}`}></div>
-                            <div className="tl-content">
-                                <span className={`tl-year ${exp.active ? 'active' : ''}`}>{exp.period}</span>
-                                <h3 className="tl-role">{exp.title}</h3>
-                                {/* Handle both string and array description formats */}
-                                {(Array.isArray(exp.desc) ? exp.desc : [exp.desc]).map((paragraph, pi) => (
-                                    <p key={pi} className="tl-desc">{paragraph}</p>
-                                ))}
+                        <div key={i} className="timeline-item fade-up-element">
+                            <div className={`timeline-dot ${exp.active ? 'active' : ''}`}></div>
+                            <div className="timeline-content">
+                                <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{exp.period}</span>
+                                <h3 className="timeline-role">{exp.title}</h3>
+                                <div className="experience-grid">
+                                    <div className="timeline-text">
+                                        {(Array.isArray(exp.desc) ? exp.desc : [exp.desc]).map((paragraph, pi) => (
+                                            <p key={pi} className="timeline-desc" style={{ marginBottom: '0.8rem' }}>{paragraph}</p>
+                                        ))}
+                                    </div>
+                                    <div className="timeline-carousel">
+                                        <Carousel slides={7} />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -81,24 +108,104 @@ function AboutWorkExperience() {
 }
 
 function AboutOrgVolunteer() {
+    const sectionRef = useRef(null)
+
+    useEffect(() => {
+        if (!sectionRef.current) return
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view')
+                        observer.unobserve(entry.target)
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+        )
+        const elements = sectionRef.current.querySelectorAll('.fade-up-element, .timeline-dot')
+        elements.forEach(el => observer.observe(el))
+        return () => observer.disconnect()
+    }, [])
+
     return (
-        <section className="about-timeline-section bg-platinum">
+        <section className="about-timeline-section bg-platinum" ref={sectionRef}>
             <div className="section-container">
                 <div className="about-section-header">
                     <h2 className="about-section-title">Organization &<br /><span className="text-accent">Volunteer Experience</span></h2>
                 </div>
-                <div className="about-timeline">
-                    <div className="tl-line"></div>
+                <div className="experience-timeline">
+                    <div className="timeline-line"></div>
                     {organizationExperiences.map((exp, i) => (
-                        <div key={i} className="tl-item">
-                            <div className={`tl-dot ${exp.active ? 'active' : ''}`}></div>
-                            <div className="tl-content">
-                                {/* Handle array descriptions for Org Exp too */}
-                                <span className={`tl-year ${exp.active ? 'active' : ''}`} style={{ color: 'var(--accent)' }}>{exp.period}</span>
-                                <h3 className="tl-role">{exp.title}</h3>
-                                {(Array.isArray(exp.desc) ? exp.desc : [exp.desc]).map((paragraph, pi) => (
-                                    <p key={pi} className="tl-desc">{paragraph}</p>
-                                ))}
+                        <div key={i} className="timeline-item fade-up-element">
+                            <div className={`timeline-dot ${exp.active ? 'active' : ''}`}></div>
+                            <div className="timeline-content">
+                                <span className={`timeline-year ${exp.active ? 'active' : ''}`} style={{ color: 'var(--accent)' }}>{exp.period}</span>
+                                <h3 className="timeline-role">{exp.title}</h3>
+                                <div className="experience-grid">
+                                    <div className="timeline-text">
+                                        {(Array.isArray(exp.desc) ? exp.desc : [exp.desc]).map((paragraph, pi) => (
+                                            <p key={pi} className="timeline-desc" style={{ marginBottom: '0.8rem' }}>{paragraph}</p>
+                                        ))}
+                                    </div>
+                                    <div className="timeline-carousel">
+                                        <Carousel slides={7} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
+
+function AboutFreelance() {
+    const sectionRef = useRef(null)
+
+    useEffect(() => {
+        if (!sectionRef.current) return
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view')
+                        observer.unobserve(entry.target)
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+        )
+        const elements = sectionRef.current.querySelectorAll('.fade-up-element, .timeline-dot')
+        elements.forEach(el => observer.observe(el))
+        return () => observer.disconnect()
+    }, [])
+
+    return (
+        <section className="about-timeline-section" ref={sectionRef}>
+            <div className="section-container">
+                <div className="about-section-header">
+                    <h2 className="about-section-title">Freelance &<br /><span className="text-accent">Project Experience</span></h2>
+                </div>
+                <div className="experience-timeline">
+                    <div className="timeline-line"></div>
+                    {freelanceExperiences.map((exp, i) => (
+                        <div key={i} className="timeline-item fade-up-element">
+                            <div className={`timeline-dot ${exp.active ? 'active' : ''}`}></div>
+                            <div className="timeline-content">
+                                <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{exp.period}</span>
+                                <h3 className="timeline-role">{exp.title}</h3>
+                                <div className="experience-grid">
+                                    <div className="timeline-text">
+                                        {(Array.isArray(exp.desc) ? exp.desc : [exp.desc]).map((paragraph, pi) => (
+                                            <p key={pi} className="timeline-desc" style={{ marginBottom: '0.8rem' }}>{paragraph}</p>
+                                        ))}
+                                    </div>
+                                    <div className="timeline-carousel">
+                                        <Carousel slides={7} />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -144,28 +251,72 @@ function AboutEducation() {
 }
 
 function HallOfFame() {
-    // Generate 15 items with varied sizes for masonry effect
-    const achievements = Array.from({ length: 15 }, (_, i) => ({
-        id: i + 1,
+    // 16:9 Landscape items (4 rows * 3 cols = 12 items)
+    const landscapeItems = Array.from({ length: 12 }, (_, i) => ({
+        id: `L-${i}`,
         title: `Achievement ${i + 1}`,
-        size: i % 5 === 0 ? 'hof-wide' : (i % 3 === 0 ? 'hof-tall' : '')
+        size: 'hof-wide' // 16:9
+    }))
+
+    // 4:5 Portrait items (2 rows * 3 cols = 6 items) or (2 rows * 4 cols = 8?)
+    // Assuming 3-column grid usually.
+    const portraitItems = Array.from({ length: 6 }, (_, i) => ({
+        id: `P-${i}`,
+        title: `Portrait ${i + 1}`,
+        size: 'hof-tall' // 4:5
     }))
 
     return (
         <section className="hall-of-fame">
             <div className="section-container">
                 <h2 className="section-title">Hall of Fame</h2>
-                <div className="hof-grid">
-                    {achievements.map((item) => (
-                        <div key={item.id} className={`hof-item ${item.size}`}>
-                            <div className="hof-placeholder">
-                                <span>{item.title}</span>
+
+                {/* Landscape Grid - 2 Cols */}
+                <div className="hof-grid-section" style={{ marginBottom: '2rem' }}>
+                    <div className="hof-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+                        {landscapeItems.map((item) => (
+                            <div key={item.id} className={`hof-item ${item.size}`}>
+                                <div className="hof-placeholder">
+                                    <span>{item.title}</span>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                </div>
+
+                {/* Portrait Grid */}
+                <div className="hof-grid-section">
+                    <div className="hof-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+                        {portraitItems.map((item) => (
+                            <div key={item.id} className={`hof-item ${item.size}`}>
+                                <div className="hof-placeholder">
+                                    <span>{item.title}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
+
+function CTASection() {
+    return (
+        <section className="cta-section">
+            <div className="section-container">
+                <SpotlightCard className="cta-spotlight" spotlightColor="rgba(235, 94, 40, 0.4)">
+                    <div className="cta-box-content">
+                        <div className="cta-text">
+                            <h2>Let's work together</h2>
+                            <p>Ready to boost your business's digital marketing performance?</p>
+                        </div>
+                        <Link to="/contact" className="btn-cta">Contact Me</Link>
+                    </div>
+                </SpotlightCard>
+            </div>
+        </section>
+    )
+}
+
 

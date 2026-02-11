@@ -20,7 +20,7 @@ export default function Contact() {
                     <div className="contact-grid">
                         {/* Left: Contact Info / Channels */}
                         <div className="contact-info fade-in-left">
-                            <h2 className="contact-info-title">Hubungi</h2>
+                            <h2 className="contact-info-title">Contact</h2>
                             <div className="contact-channels">
                                 <a href="mailto:muhammadqolbi00@gmail.com" className="contact-channel">
                                     <div className="channel-icon">
@@ -56,29 +56,29 @@ export default function Contact() {
                         <div className="contact-form-wrapper fade-in-right">
                             {submitted ? (
                                 <div className="contact-success" style={{ padding: '2rem', textAlign: 'center', color: 'var(--accent)' }}>
-                                    <h3>Pesan Terkirim!</h3>
-                                    <p>Terima kasih telah menghubungi saya.</p>
+                                    <h3>Message Sent!</h3>
+                                    <p>Thank you for contacting me.</p>
                                 </div>
                             ) : (
                                 <form className="contact-form" onSubmit={handleSubmit}>
                                     <div className="form-group">
-                                        <label htmlFor="name">Nama Lengkap</label>
-                                        <input type="text" id="name" placeholder="Masukkan nama lengkap" required />
+                                        <label htmlFor="name">Full Name</label>
+                                        <input type="text" id="name" placeholder="Enter your full name" required />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="email">Email</label>
-                                        <input type="email" id="email" placeholder="email@contoh.com" required />
+                                        <input type="email" id="email" placeholder="email@example.com" required />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="subject">Subjek</label>
-                                        <input type="text" id="subject" placeholder="Tentang apa?" />
+                                        <label htmlFor="subject">Subject</label>
+                                        <input type="text" id="subject" placeholder="What is this about?" />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="message">Pesan</label>
-                                        <textarea id="message" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+                                        <label htmlFor="message">Message</label>
+                                        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
                                     </div>
                                     <button type="submit" className="form-submit">
-                                        <span>Kirim Pesan</span>
+                                        <span>Send Message</span>
                                         <Send size={18} />
                                     </button>
                                 </form>

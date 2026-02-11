@@ -1,0 +1,173 @@
+import { Search, TrendingUp, PenTool, BookOpen, Share2, Star, Mic, Code } from 'lucide-react'
+
+export const skills = [
+    { name: 'Search Engine Optimization', Icon: Search },
+    { name: 'Digital Marketing', Icon: TrendingUp },
+    { name: 'Copywriting', Icon: PenTool },
+    { name: 'Content Writing', Icon: BookOpen },
+    { name: 'Social Media Management', Icon: Share2 },
+    { name: 'KOL Specialist', Icon: Star },
+    { name: 'Public Speaking', Icon: Mic },
+    { name: 'Vibe Coding', Icon: Code },
+]
+
+export const experiences = [
+    {
+        title: 'Chief Marketing Officer — Job on Yours (JOY)',
+        period: '2025 — Present',
+        active: true,
+        desc: [
+            <>Since May 2025, I have been entrusted with the role of <strong>Chief Marketing Officer (CMO)</strong> at Job on Yours (JOY), holding full responsibility for the organization's digital marketing direction and brand growth. My primary mission is to enhance brand awareness and audience engagement through leadership across four strategic divisions: Social Media Specialist, Content Writer, Content Creator, and Graphic Designer. To maximize team performance, I established measurable KPIs and built automated workflows using Google Spreadsheets and Google Apps Script by creating three task management applications (<a href="https://tinyurl.com/sosboard-joy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">SOSBOARD</a> | <a href="https://tinyurl.com/JOY-MorpestV3" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">MORPEST</a> | <a href="https://tinyurl.com/all-mark-joy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ALL-MARK</a>). I also consistently implemented an Instagram content strategy with 4 posts per week, optimizing over 44 content briefs, and conducting periodic evaluations to ensure branding consistency across every platform.</>,
+            <>This data-driven and automated strategy yielded significant results, with the period from October to December 2025 recording an engagement rate of 59.20% and reaching 2,185 accounts. Previously, while serving as Head of Branding, I successfully drove follower growth by <strong>529%</strong> in just three months. This dedication also earned recognition in the form of Best Division and Best Head of Division awards for three consecutive months from May to July 2025. This experience deeply honed my ability to integrate strategic leadership with technical solutions, proving that automated workflows are key to supporting rapid growth without compromising creative quality. These data-based managerial skills now serve as a strong foundation for me to make tangible professional contributions.</>
+        ]
+    },
+    {
+        title: 'Head of Grand Marketing — Paradicfest Vol.2',
+        period: '2024',
+        desc: [
+            'Paradicfest Vol.2 was a major music concert event in Malang with an initial sales target of 6,000 tickets. When the committee faced an internal crisis and significant loss of human resources, I took the initiative to restructure the team, eventually being promoted to Head of Grand Marketing. In this position, I led 36 people across five divisions and designed a comprehensive marketing strategy, including offline roadshows at various crowd centers and online campaigns. I coordinated the production of 54 Instagram posts and 45 TikTok videos over three months, established collaborations with 28 media partners and 7 influencers, and built new workflow systems to maintain productivity despite staff shortages.',
+            'This aggressive strategy yielded extraordinary results, obtaining total sales of 8,000 tickets—exceeding the target by 33.3%—and generating gross revenue of 1.2 billion Rupiah in less than four months. Beyond financial success, the official Instagram followers increased significantly from 13.2K to 15.5K, and the entire event series ran smoothly to the end. This experience was a true test of my leadership capabilities during a crisis, teaching me that quick and bold decisions are crucial for saving large projects. Managing a large team with diverse responsibilities under high pressure has deeply sharpened my conflict management and strategic communication skills.'
+        ]
+    },
+    {
+        title: 'Program Facilitator — Cetta Online Class',
+        period: '2023',
+        desc: [
+            'For ten months in 2023, I contributed to Cetta Online Class, an edu-tech startup, where my journey began as a Student Ambassador (CSA) before being entrusted to level up as a Program Facilitator for 62 student ambassadors. In this strategic role, I was responsible for designing impactful work programs, monitoring ambassador performance, and acting as the main communication bridge to ensure new student acquisition targets were met. I assisted the Community Manager in designing programs, facilitated over 8 exclusive mentoring sessions, and actively managed the community to build a sense of belonging through weekly discussions and disciplined task monitoring.',
+            'As a result, the mentorship I provided successfully helped 62 student ambassadors achieve their audience reach and new student acquisition targets, while I personally acquired 5 students as tangible proof of my contribution to the company\'s growth. The mentoring program series I facilitated not only equipped ambassadors with maximum skills but also honed my own capabilities in Brand Ambassador Management and Project Management. This experience taught me the importance of balancing strict KPI monitoring with empathy in personal relationships, which has now become a valuable asset for me in mobilizing communities and representing brands in the digital marketing industry.'
+        ]
+    },
+    {
+        title: 'Content Writer Intern — Buangdisini.id',
+        period: '2023',
+        desc: [
+            <>Between February and June 2023, I served as a Content Writer Intern at <strong>Buangdisini.id</strong>, a circular economy startup focused on transforming waste into valuable commodities. My main responsibilities included managing and curating cross-platform social media content (Instagram, Twitter, LinkedIn, TikTok).</>,
+            <>Over the 120-day internship, these efforts yielded significant results in the form of a <strong>34% increase</strong> in Instagram followers (from 3.5K to 4.7K) and achieving a <strong>100% task completion rate</strong> on the content planner. The SEO articles I developed successfully drove traffic to the company's official website, and media releases were published by local media (javasatu.com).</>
+        ]
+    },
+    {
+        title: 'Co-Head Content Writer — Candidate College',
+        period: '2021 — 2023',
+        desc: [
+            <>During my tenure at Candidate College between September 2021 and June 2023, I started as staff and was successfully promoted to <strong>Co-Head of the Content Writer Division</strong> at this remote-based education platform. I led the weekly content strategy on Instagram, Twitter, and LinkedIn with a highly dense publication schedule, covering the management of 7 stories and 2 feed posts every week. To manage this heavy workload efficiently, I optimized the use of a Google Suite-based content planner matrix to organize over <strong>200 content briefs</strong> and video scripts, as well as initiating inspiring monthly feature stories of overseas students to boost audience engagement. Beyond technical aspects, I played an active role in guiding intern performance and conducting periodic evaluations with management to ensure every narrative aligned with the organization's greater goals.</>,
+            <>This strategic leadership had a tangible impact on organic social media growth, where Instagram followers successfully increased by <strong>23%</strong> (from 25K to 30.8K) and LinkedIn followers grew significantly from 1K to 1.7K. Thanks to these collective achievements, our division was named Best Division in April 2023, while I personally won the Staff of the Month award and completed my tenure with a "Very Good" rating (final score 89.5). This experience of nearly two years deeply honed my leadership and team management skills in a remote work environment. I realized that the key to managing large teams lies in organized workflow systems and continuous mentorship, which is now my main strength in managing cross-platform content strategies professionally.</>
+        ]
+    },
+]
+
+export const organizationExperiences = [
+    {
+        period: 'Sep 2023 — Aug 2025',
+        title: 'Faculty Ambassador (Science & Tech) — UIN Malang',
+        active: true,
+        desc: [
+            <>From September 2023 to August 2025, I served as the Ambassador for the <strong>Faculty of Science and Technology</strong> (Student Ambassador) at UIN Maulana Malik Ibrahim Malang, a role that marked the peak of my official representation as the face of the faculty across various platforms. I bore strategic responsibility for increasing faculty visibility through the planning and implementation of promotional activities, advocacy, and serving as a protocol officer and Master of Ceremony (MC) in international-scale events. Proactively, I led outreach programs to various high schools in Probolinggo and Madiun, and was entrusted to be the MC for prestigious agendas such as Graduation (Yudisium), Professor Inauguration, and the International Conferences of Green Technology (ICGT) 2024 and 2025. Furthermore, I initiated social advocacy activities such as break-fasting events with orphans to strengthen faculty community solidarity.</>,
+            <>This dedication resulted in recognition as the <strong>Most Favorite Ambassador in 2023</strong>, and successfully strengthened the institutional profile and collaborative relationships with various other campus ambassadors. Through this role, I gained access to a wide network of important figures, university officials, and internal staff, enriching my professional insights. The experience as an ambassador taught me the essence of integrity, time discipline, and adaptive communication on a broader formal scale. The public relations and leadership skills I honed under the direct supervision of faculty leadership have proven my ability to maintain high professional standards, ready to be implemented in a professional work environment.</>
+        ]
+    },
+    {
+        period: '2021 — 2024',
+        title: 'Talent & Interest Division — DEMA FST UIN Malang',
+        desc: [
+            'Since my first year of college from 2021 to 2024, I was actively involved in the Student Executive Council of the Faculty of Science and Technology (DEMA FST) under the Talent and Interest Division. Despite starting as an intern member, I was entrusted with a crucial role in planning and executing the faculty\'s flagship programs such as "Saintek Event" (sports and e-sport competition) and the 2024 FST Ambassador Selection. In the end-to-end event preparation coordination process, I proactively established communication with faculty leadership ranks—from the Dean to lecturers—as well as external campus parties to ensure every technical detail ran in sync. I leveraged extensive relations and experience as a professional Master of Ceremony (MC) to maintain smoothness and quality standards for every prestigious event held.',
+            'These efforts resulted in the success of annual event series with high audience participation rates, where the 2024 FST Ambassador Selection event I managed successfully attracted 36 participants and produced 12 selected ambassadors. My reputation as a reliable MC and consistent contribution to this organization eventually led to my selection as part of the FST Ambassador for the 2023-2025 period. My journey at DEMA FST provided valuable lessons regarding complex event management and the importance of professional communication across job levels. The public communication skills and ability to build trust that I honed here have become a fundamental foundation supporting my readiness to face dynamic and challenging work situations.'
+        ]
+    },
+    {
+        period: '2022 — 2023',
+        title: 'Head of Education Dept. — BIC (Bank Indonesia Corner)',
+        desc: [
+            'When I joined the Bank Indonesia Corner (BIC) at UIN Malang, the organization managing this Bank Indonesia reading corner was in a critical phase after being inactive for the past two years. As Head of the Training, Development, and Education Department (DP3), I bore the great responsibility of reviving the institution\'s existence by building the organizational foundation from scratch and unifying the vision of existing human resources. I initiated a flagship program titled KANTIN (Routine Discussion by BIC) through strategic collaboration with the Bank Indonesia Malang branch, the Chief Editor of Jawa Pos Radar Malang, and faculty academics. Additionally, I led BIC\'s active involvement in Library Introduction Week (PKP) to strengthen students\' branding and awareness of BIC\'s position as Bank Indonesia\'s representation on campus.',
+            'This integrative strategy successfully revived the organization\'s pulse and transformed BIC into a highly highlighted institution at the university level with a strong foundation for the next management. Through the consistency of the KANTIN program and participation in PKP, we successfully restored the organization\'s trust and credibility in the eyes of internal and external parties. This experience serves as proof of my ability to drive positive change (turnaround) amidst challenging situations, teaching me that reviving a dormant organization requires solid HR management and broad professional relations. These lessons on the importance of maintaining existence through consistent branding have now become valuable assets in my professional career development.'
+        ]
+    },
+    {
+        period: '2022 — 2023',
+        title: 'Vice Head of Academic Dev. — HMPS PSI UIN Malang',
+        desc: [
+            'During my studies at UIN Malang (2022-2023), I was entrusted to serve as Vice Head of the Academic Development Division of HMPS PSI, responsible for enhancing student academic capacity. This role required me to coordinate strategic programs such as Blogging and Infographic Workshops as the chief executive, manage educational content "Sudut Pustaka" on social media, and serve as the organization\'s representative as MC and Moderator. When facing heavy challenges such as administrative constraints and difficult-to-coordinate team dynamics, I took firm steps by strengthening internal rules and diving in hands-on during every preparation process to ensure every technical detail was monitored perfectly until execution day.',
+            'This disciplined leadership and measurable operations resulted in a successful series of events that received positive appreciation. My reputation and dedication were recognized even after my tenure, where I was invited back by the 2025 cabinet as a speaker in the Train of Organization (TOO) to equip new executives with organizational strategies and leadership skills. This experience shaped me into a resilient and adaptive individual, teaching me that effective leadership is not just about giving orders, but being present to provide clear direction—a foundation of communication and team management that is now a primary asset in my professional journey.'
+        ]
+    }
+]
+
+export const testimonials = [
+    { name: 'Client 1', text: '"Very professional and the work exceeded expectations. The provided strategy greatly helped my business grow."' },
+    { name: 'Client 2', text: '"Obi truly understands our brand needs. The copywriting created is always engaging and generates high conversions."' },
+    { name: 'Client 3', text: '"Amazing collaboration! The content produced is always on-brand and significantly improved our social media engagement."' },
+    { name: 'Client 4', text: '"The executed strategy was very effective, our website traffic increased drastically!"' },
+    { name: 'Client 5', text: '"Smooth communication and timely delivery. Highly recommend Obi\'s services."' },
+]
+
+export const blogPosts = [
+    { title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
+    { title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
+    { title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
+]
+
+export const freelanceExperiences = [
+    {
+        period: 'Jan 2026 — Present',
+        title: 'KOL Specialist — Asian Kung-Fu Generation 30th Anniversary',
+        desc: [
+            "Since January 2026, I have served as a KOL Specialist for the Asian Kung-Fu Generation 30th Anniversary concert organized by @hypelive.id at Hall Basket Senayan. My primary focus is building an integrated promotion ecosystem capable of converting social media audiences into ticket buyers. Technically, I conduct strict curation of influencers with specific personas, such as \"jejepangan\" (Japanese pop culture) communities and iconic cover singers, to ensure content relevance. I manage the entire partnership cycle independently, from initial offers, rate card and Scope of Work (SOW) negotiations, MOU processing, to drafting adaptive content briefs ensuring effective promotional messages that align with the unique style of each creator on TikTok and Instagram.",
+            "To optimize results, I designed a neat schedule management system and determined the content volume strategy and monthly KOL needs based on set growth targets. I am also responsible for orchestrating \"buzzer\" movements through intensive coordination with vendors to amplify specific posts for maximum reach within social media algorithms. Through this structured management system, I successfully created an optimal workflow, massively increased event visibility, and maximized the probability of converting viewers into ticket buyers. This experience honed my skills in stakeholder management and strategic planning, proving that the success of grand campaigns lies in execution details and the synergy between organic content and third-party reinforcement."
+        ]
+    },
+    {
+        period: '2026',
+        title: 'Event Operator — AEML (Report Launching & FGD Projects)',
+        desc: [
+            "In 2026, I was entrusted as an Event Operator for two prestigious national-scale agendas organized by AEML (Electric Mobility Ecosystem Association) in collaboration with the Directorate General of ILMATE Ministry of Industry and Rocky Mountain Institute (RMI). My main task was to manage end-to-end audiovisual operations for the presidential regulation report launch and the FGD forum on Indonesia's electric vehicle potential. Technically, I held full control over videotron display synchronization—from airing event bumpers, the national anthem, to technical presentation materials from ministry leaders—as well as ensuring the microphone audio system distribution functioned perfectly for all VIP participants and speakers.",
+            "Through highly meticulous technical management, I ensured the entire series of formal events attended by government officials and international institutions ran smoothly without a single technical glitch. The success in maintaining visual display stability and audio quality amidst this crucial forum successfully strengthened the event's credibility and professional atmosphere in the eyes of stakeholders. This experience provided valuable lessons on the composure and high concentration required when managing live event operations involving important figures. I realized that flawless technical execution is a vital element supporting the success of strategic message delivery in every ministry and industry association agenda."
+        ]
+    },
+    {
+        period: 'Sep 2025',
+        title: 'Data Visualizer — Training of Trainers (TOT) Rumah Energi',
+        desc: [
+            "In September 2025, I was personally requested by the Rumah Energi Foundation to serve as a Data Visualizer for the Green Cooperative Training of Trainer (ToT) agenda in collaboration with the UGM Center for Economic Studies, the Ministry of Cooperatives, and the Climateworks Foundation. My main task was to manage, organize, and transform all raw data from the series of events themed around strengthening the role of the Cooperative Office in ESG governance and climate-resilient business transformation. Technically, I led the integration of data collected from both offline and online event implementation to unify it into a coherent report system. I designed precise data visualizations so that every essence of the high-volume raw data could be presented systematically and easily understood by strategic audiences.",
+            "The final result of this work was a comprehensive visual report capable of displaying crucial points and key findings from the ToT implementation clearly and professionally. The visualizations I created successfully facilitated Rumah Energi and partners in extracting important insights for policy follow-up reports. This experience sharpened my analytical skills in processing hybrid data and strengthened my ability to actuate accurate visual narratives for the needs of international organizations and governments. I learned that the role of a data visualizer is vital as a bridge simplifying technical data complexity into information assets that support strategic decision-making."
+        ]
+    },
+    {
+        period: 'Sep 2025',
+        title: 'Email Marketer — Kreatologi & Communiverse.id',
+        desc: [
+            "In September 2025, I served as an Email Marketer for Kreatologi and Communiverse.id, where my main focus was building professional communication infrastructure for B2B outreach needs. Kreatologi, as an event organizer service company, required a credible communication channel to offer their services to corporate clients. My tasks included comprehensive email marketing system configuration, including the creation of professional domain-based business email addresses. I was responsible for drafting and distributing event management service offer materials, both offline and online, specifically targeted at various companies in the FMCG sector.",
+            "The result of this initiative was the creation of a more standardized marketing channel and an increased level of professional digital identity for the company in the eyes of prospective clients. By using well-configured business emails, I successfully strengthened Kreatologi's image when making strategic approaches to targeted FMCG company subjects. This experience provided valuable lessons regarding the importance of technical aspects in supporting marketing credibility. I realized that in the professional world, a neatly organized digital identity is the main entry point to building trust and opening collaboration opportunities with large-scale business partners."
+        ]
+    },
+    {
+        period: 'Jul 2024',
+        title: 'WordPress Builder — Radio Suara Kota Probolinggo',
+        desc: [
+            "In July 2024, I was entrusted to redesign the Radio Suara Kota Probolinggo website, a unit under the Probolinggo City Communication and Informatics Department (KOMINFO), due to the old platform being irrelevant to current digital standards. The main challenge in this project was integrating complex technical features, such as a live radio streaming system and an interface friendly to users with disabilities. During three weeks of work using WordPress, I focused on building an inclusive site architecture while implementing strict cybersecurity protocols, including conducting brute-force testing to ensure system resilience against external attacks.",
+            "As a result, the website was successfully completed on time with very satisfactory security performance and was officially accepted by the institution's internal team. The success of implementing accessibility features and complex audio integration served as proof of my technical capability in producing reliable digital solutions for public institutions. This experience deepened my expertise in WordPress system management and provided personal professional satisfaction in being able to contribute to the modernization of public information services through secure and accessible technology."
+        ]
+    },
+    {
+        period: 'Feb 2024',
+        title: 'WordPress Builder — Kreatologi',
+        desc: [
+            "In February 2024, I handled the website recovery project for Kreatologi, which had just experienced configuration damage due to a brute force attack. My main task was to perform a total restoration of the disordered digital footprint and rebuild the site's security system to be more resilient in the future. I began the process by conducting a deep audit to understand the main cause of the system vulnerability, researching original theme references used, and cleaning up all remaining traces left by hackers. After cleaning the messy configuration, I reorganized the site structure and made design adjustments to several parts according to special requests from the owner to improve its functionality.",
+            "Through intensive work, I successfully completed the entire recovery process in just one week with results that were very satisfactory to the company owner. The success of this project became tangible validation of the technical skills I learned as an autodidact, especially in handling cybersecurity crisis situations and WordPress database management. This experience gave me a sense of pride and a valuable lesson that deep understanding of technical structures and strong research skills are key to solving complex problems. The success of this restoration is now proof of my competence in providing web solutions that are not only aesthetic but also have high technical resilience."
+        ]
+    },
+    {
+        period: 'Feb 2024',
+        title: 'WordPress Builder — Shaperior',
+        desc: [
+            "I was entrusted to build an e-commerce platform for Shaperior, a gym accessories brand, with a primary focus on integrating an automated payment system via WooCommerce and Midtrans payment gateway. To ensure security and ease of transaction for lay users, I conducted deep research into buyer profiles and product characteristics to design an intuitive interface free of technical hurdles. I worked on this project intensively through a learning-by-doing approach, simultaneously taking online website management classes from habiskerja.com to ensure every technical feature was implemented with high functional standards.",
+            "The result was a comprehensive website consisting of 14 pages successfully completed within one month and fully handed over to the owner in smooth operational condition. This project was a very memorable achievement as it was my first experience handling a client outside my personal circle (stranger), which simultaneously validated my competence in managing commercial-scale projects. Through this experience, I not only delivered a ready-to-use digital product but also deepened my technical expertise in Midtrans payment system integration and website management, which are now important assets in my career as a web developer."
+        ]
+    },
+    {
+        period: 'Jun 2023',
+        title: 'WordPress Builder — Yayasan Pemberdayaan Ummat Darussalam (YPUD) Kebumen',
+        desc: [
+            "During my fourth semester of college, I was entrusted by the Chairman of the Yayasan Pemberdayaan Ummat Darussalam (YPUD) Kebumen to build a professional website as the digital representation of the institution managing levels from RA, MI, to the Football School (SSB-DSA). I started this project by conducting a deep analysis of the foundation's needs to define the features and assets most targeted for the educational institution's profile. I carried out the work process in a structured manner, starting from the preparation of the skeleton plan and low-fidelity design to high-fidelity execution using WordPress with Elementor Pro support to ensure a modern and functional look.",
+            "In two weeks, I successfully completed and launched the website using reliable hosting infrastructure to guarantee optimal performance and accessibility for the public. The success of this project became an important milestone in my professional journey, proving that I was able to meet client expectations tangibly despite still being an active student. This experience providing valuable lessons on project management from upstream to downstream and becoming a strong motivation for me to commercialize the technical skills I possess professionally from an early age."
+        ]
+    }
+]

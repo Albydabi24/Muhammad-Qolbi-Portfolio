@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Instagram, Linkedin, Home, User, Image } from 'lucide-react'
+import { Dock, DockIcon } from './Dock'
 
 export default function Footer() {
     return (
@@ -8,12 +9,30 @@ export default function Footer() {
                 <div className="footer-grid" style={{ marginBottom: '5rem' }}> {/* Increased spacing from 3rem to 5rem */}
                     {/* Left — Logo + Nav + Contact */}
                     <div className="footer-left">
-                        <div className="footer-logo">OBI.</div>
-                        <nav className="footer-nav">
-                            <Link to="/">Home</Link>
-                            <Link to="/about">About</Link>
-                            <Link to="/gallery">Gallery</Link>
-                            <Link to="/contact">Contact</Link>
+                        <Link to="/" className="footer-logo" style={{ textDecoration: 'none', color: 'inherit' }}>OBI.</Link>
+                        <nav style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '2rem' }}>
+                            <Dock magnification={60} distance={100} style={{ gap: '30px' }}>
+                                <DockIcon width={50} magnification={70} className="bg-black/10 dark:bg-white/10 p-2">
+                                    <Link to="/" aria-label="Home" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
+                                        Home
+                                    </Link>
+                                </DockIcon>
+                                <DockIcon width={55} magnification={75} className="bg-black/10 dark:bg-white/10 p-2">
+                                    <Link to="/about" aria-label="About" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
+                                        About
+                                    </Link>
+                                </DockIcon>
+                                <DockIcon width={65} magnification={85} className="bg-black/10 dark:bg-white/10 p-2">
+                                    <Link to="/gallery" aria-label="Gallery" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
+                                        Gallery
+                                    </Link>
+                                </DockIcon>
+                                <DockIcon width={65} magnification={85} className="bg-black/10 dark:bg-white/10 p-2">
+                                    <Link to="/contact" aria-label="Contact" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
+                                        Contact
+                                    </Link>
+                                </DockIcon>
+                            </Dock>
                         </nav>
                         <div className="footer-contact-info" style={{ gap: '1.5rem' }}> {/* Increased gap slightly */}
                             <div className="footer-contact-item">

@@ -19,7 +19,7 @@ export default function SplitText({
         const chars = containerRef.current.querySelectorAll('.split-char')
         if (chars.length === 0) return
 
-        gsap.set(chars, { opacity: 0, y: 40, filter: 'blur(8px)' })
+        gsap.set(chars, { opacity: 0, y: 40, filter: 'blur(4px)' })
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -38,7 +38,7 @@ export default function SplitText({
                     }
                 })
             },
-            { threshold: 0.3 }
+            { threshold: 0.1 }
         )
 
         observer.observe(containerRef.current)
