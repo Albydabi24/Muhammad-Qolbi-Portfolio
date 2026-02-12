@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loading from './components/Loading'
+import ScrollToTop from './components/ScrollToTop'
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'))
@@ -34,6 +35,7 @@ export default function App() {
                     </AnimatePresence>
                 </main>
                 <Footer />
+                <ScrollToTop />
             </div>
         </HelmetProvider>
     )

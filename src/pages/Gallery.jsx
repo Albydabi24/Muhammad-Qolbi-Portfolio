@@ -120,22 +120,23 @@ function OpapaSection() {
                 }}>
                     {items.map((item, index) => (
                         <div key={item.id} className="opapa-item fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                            <div className="opapa-info" style={{
-                                padding: '1rem',
-                                background: 'var(--bg-card)',
-                                borderTop: '1px solid var(--border-color)',
-                                borderRadius: '0 0 var(--radius-md) var(--radius-md)'
-                            }}>
-                                <h4 style={{ margin: 0, fontSize: '1rem' }}>{item.title}</h4>
-                            </div>
                             <GlareCard className="opapa-card" style={{
                                 position: 'relative',
                                 overflow: 'hidden',
-                                borderRadius: 'var(--radius-md)',
+                                borderRadius: 'var(--radius-md) var(--radius-md) 0 0',
                                 boxShadow: 'var(--shadow-lg)'
                             }}>
                                 <img src={item.src} alt={item.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} loading="lazy" />
                             </GlareCard>
+                            <div className="opapa-info" style={{
+                                padding: '1rem',
+                                background: 'var(--bg-card)',
+                                border: '1px solid var(--border-color)',
+                                borderTop: 'none',
+                                borderRadius: '0 0 var(--radius-md) var(--radius-md)'
+                            }}>
+                                <h4 style={{ margin: 0, fontSize: '1rem' }}>{item.title}</h4>
+                            </div>
                         </div>
                     ))}
                 </div>
