@@ -2629,6 +2629,7 @@ ul {
 }
 
 .gallery-hero-subtitle {}
+
 /* ─── Scroll To Top ─── */
 .scroll-btn {
     position: fixed;
@@ -2663,4 +2664,14 @@ ul {
         width: 45px;
         height: 45px;
     }
+}
+
+/* ─── Opapa Glare Card ─── */
+.opapa-glare-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.opapa-glare-card .glare-overlay {
+    opacity: 0.4;
 }

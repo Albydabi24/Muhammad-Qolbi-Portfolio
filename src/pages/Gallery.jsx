@@ -132,7 +132,9 @@ function OpapaSection() {
                                 boxShadow: 'var(--shadow-md)'
                             }}>
                                 <div className="opapa-img-wrapper" style={{ flexShrink: 0 }}>
-                                    <img src={item.src} alt={item.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} loading="lazy" />
+                                    <GlareCard className="opapa-glare-card" style={{ width: '100%', height: '100%', borderRadius: '0' }}>
+                                        <img src={item.src} alt={item.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} loading="lazy" />
+                                    </GlareCard>
                                 </div>
                                 <div className="opapa-info" style={{
                                     padding: '1.25rem',
