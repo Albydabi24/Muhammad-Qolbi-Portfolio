@@ -36,7 +36,7 @@ function GalleryHero() {
                     delay={40}
                     style={{ fontSize: '3.5rem' }}
                 />
-                <div style={{ marginTop: '0.5rem' }}>
+                <div style={{ marginTop: '0rem' }}>
                     <SplitText
                         tag="p"
                         className="gallery-hero-subtitle"
@@ -104,7 +104,7 @@ function OpapaSection() {
     // 12 Items total
     const items = Array.from({ length: 12 }, (_, i) => ({
         id: i + 1,
-        title: `${t('gallery.orgItemTitle')} ${i + 1}`,
+        title: t(`gallery.orgItems.${i + 1}`),
         src: `/photos/ORGANIZATION AND VOLUNTEER/Organization-${i + 1}.webp`
     }))
 
@@ -120,6 +120,14 @@ function OpapaSection() {
                 }}>
                     {items.map((item, index) => (
                         <div key={item.id} className="opapa-item fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                            <div className="opapa-info" style={{
+                                padding: '1rem',
+                                background: 'var(--bg-card)',
+                                borderTop: '1px solid var(--border-color)',
+                                borderRadius: '0 0 var(--radius-md) var(--radius-md)'
+                            }}>
+                                <h4 style={{ margin: 0, fontSize: '1rem' }}>{item.title}</h4>
+                            </div>
                             <GlareCard className="opapa-card" style={{
                                 position: 'relative',
                                 overflow: 'hidden',
@@ -127,14 +135,6 @@ function OpapaSection() {
                                 boxShadow: 'var(--shadow-lg)'
                             }}>
                                 <img src={item.src} alt={item.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} loading="lazy" />
-                                <div className="opapa-info" style={{
-                                    padding: '1rem',
-                                    background: 'var(--bg-card)',
-                                    borderTop: '1px solid var(--border-color)',
-                                    borderRadius: '0 0 var(--radius-md) var(--radius-md)'
-                                }}>
-                                    <h4 style={{ margin: 0, fontSize: '1rem' }}>{item.title}</h4>
-                                </div>
                             </GlareCard>
                         </div>
                     ))}

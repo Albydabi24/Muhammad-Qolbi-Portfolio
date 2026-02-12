@@ -273,7 +273,10 @@ function TestimonialsSection() {
         <section className="testimonials-section" id="testimonials">
             <div className="section-container">
                 <div className="testimonials-header">
-                    <h2 className="section-title-light">{t('testimonials.title')}</h2>
+                    <div style={{ marginBottom: '3rem' }}>
+                        <h2 className="section-title-light" style={{ marginBottom: '0.5rem' }}>{t('testimonials.title')}</h2>
+                        <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontWeight: 500 }}>{t('testimonials.desc')}</p>
+                    </div>
                     <div className="testimonials-nav">
                         <button className="testi-arrow" onClick={handlePrev} aria-label="Previous">
                             <ChevronLeft size={22} />

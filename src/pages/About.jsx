@@ -285,7 +285,10 @@ function HallOfFame() {
     return (
         <section className="hall-of-fame">
             <div className="section-container">
-                <h2 className="section-title">{t('hallOfFame.title')}</h2>
+                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                    <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>{t('hallOfFame.title')}</h2>
+                    <p style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{t('hallOfFame.desc')}</p>
+                </div>
 
                 {/* Landscape Grid - 2 Cols */}
                 <div className="hof-grid-section" style={{ marginBottom: '2rem' }}>

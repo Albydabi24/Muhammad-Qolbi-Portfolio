@@ -35,7 +35,8 @@
         "year": "Year"
     },
     "hallOfFame": {
-        "title": "Hall of Fame"
+        "title": "Hall of Fame",
+        "desc": "Recognitions and milestones that mark my journey of growth and contribution."
     },
     "experience": {
         "title": "Work",
@@ -46,18 +47,33 @@
         "desc": "I possess diverse experience across various fields tailored to your needs. This is all proof that I am very serious about developing my potential in various things and trying to show the best results that I can"
     },
     "testimonials": {
-        "title": "What They Say About Me"
+        "title": "What They Say About Me",
+        "desc": "Honest feedback from colleagues and mentors I've had the privilege to work with."
     },
     "gallery": {
         "title": "Gallery",
         "subtitle": "A collection of my creative works and moments. Scroll to explore",
         "workTitle": "My Work Experiences Galleries",
         "orgTitle": "My Organization & Volunteer Experiences Galleries",
-        "orgItemTitle": "Organization & Volunteer Moment"
+        "orgItems": {
+            "1": "Preparation for the CANTINE event (ROUTINE STUDY) with the BIC team at the Central Library of UIN Malang",
+            "2": "Moderating a writing workshop event with Journalists from Jawa Pos Radar Malang",
+            "3": "Leading the Artmostfair event, the peak night of the DEMA FST celebration, as Master of Ceremony",
+            "4": "Comparative study of DEMA FST Working Cabinet in 2024 to the Faculty of Mathematics and Natural Sciences at Jember University",
+            "5": "Leading the introduction of campus academic culture (PBAK) to new students in 2024-2025",
+            "6": "Grand Final Moment for the 2024 Faculty of Science and Technology Ambassador Selection at the UIN Malang Rectorate",
+            "7": "Photo of the class of 2023 ambassadors from the science and technology faculty of UIN Malang",
+            "8": "Official photo of the 2024 UIN Malang faculty of science and technology student executive board",
+            "9": "Socialization visit related to the science and technology faculty of UIN Malang to MAN 2 Probolinggo City",
+            "10": "Photo of the management of the working cabinet of HMPS Library and Information Science administrators in 2022",
+            "11": "Material about Organizations at the 2025 HMPS Library Science and Information Training Of Organization event",
+            "12": "Reunion and open discussion of all Bank Indonesia Corner (BIC) UIN Malang administrators"
+        }
     },
     "contactPage": {
         "title": "Get In Touch",
         "subtitle": "Contact",
+        "subtitleDesc": "Submit an email here or contact me via number and social media",
         "email": "Email",
         "phone": "Phone",
         "whatsapp": "WhatsApp",

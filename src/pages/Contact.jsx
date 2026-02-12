@@ -48,6 +48,15 @@ export default function Contact() {
             <section className="contact-hero">
                 <div className="section-container">
                     <h1 className="contact-main-title fade-in">{t('contactPage.title')}</h1>
+                    <p className="fade-in" style={{
+                        textAlign: 'center',
+                        maxWidth: '600px',
+                        margin: '0 auto 3rem',
+                        color: 'var(--text-secondary)',
+                        fontSize: '1rem'
+                    }}>
+                        {t('contactPage.subtitleDesc')}
+                    </p>
 
                     <div className="contact-grid">
                         {/* Left: Contact Info / Channels */}
