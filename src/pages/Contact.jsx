@@ -95,19 +95,19 @@ export default function Contact() {
                                 <form className="contact-form" onSubmit={handleSubmit}>
                                     <div className="form-group">
                                         <label htmlFor="name">{t('contactPage.form.name')}</label>
-                                        <input type="text" id="name" placeholder={t('contactPage.form.namePlaceholder')} required />
+                                        <input type="text" id="name" name="name" placeholder={t('contactPage.form.namePlaceholder')} required />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="email">{t('contactPage.form.email')}</label>
-                                        <input type="email" id="email" placeholder={t('contactPage.form.emailPlaceholder')} required />
+                                        <input type="email" id="email" name="email" placeholder={t('contactPage.form.emailPlaceholder')} required />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="subject">{t('contactPage.form.subject')}</label>
-                                        <input type="text" id="subject" placeholder={t('contactPage.form.subjectPlaceholder')} />
+                                        <input type="text" id="subject" name="subject" placeholder={t('contactPage.form.subjectPlaceholder')} />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="message">{t('contactPage.form.message')}</label>
-                                        <textarea id="message" rows="5" placeholder={t('contactPage.form.messagePlaceholder')} required></textarea>
+                                        <textarea id="message" name="message" rows="5" placeholder={t('contactPage.form.messagePlaceholder')} required></textarea>
                                     </div>
                                     <button type="submit" className="form-submit" disabled={isSubmitting} style={{ opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}>
                                         <span>{isSubmitting ? 'Sending...' : t('contactPage.form.send')}</span>
