@@ -8,17 +8,18 @@ import Carousel from '../components/Carousel'
 import Particles from '../components/Particles'
 import SpotlightCard from '../components/SpotlightCard'
 import { skills, experiences, testimonials, blogPosts } from '../data'
+import { useTranslation, Trans } from 'react-i18next'
+import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 const LOGO_IMG = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0j6z2QgoeLStEHFE2mXZvdx9OPKV7GQt7sA&s'
 const ABOUT_IMG = 'https://media.licdn.com/dms/image/v2/C4D12AQEsE-QAj5uG4w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1609780633737?e=2147483647&v=beta&t=W7TkFqqYlintQzikTmFXCJxR0MuUPIS7uMSX8ot5S6M'
 
-// Create enough copies for smooth infinite loop
-const logos = Array(12).fill(LOGO_IMG)
-
 /* ═══════════ COMPONENT ═══════════ */
 export default function Home() {
     return (
-        <>
+        <PageTransition>
+            <SEO title="Home" />
             <HeroSection />
             <LogoTicker />
             <AboutProblem />
@@ -27,33 +28,36 @@ export default function Home() {
             <TestimonialsSection />
             <BlogSection />
             <CTASection />
-        </>
+        </PageTransition>
     )
 }
 
 /* ───── Hero ───── */
 function HeroSection() {
+    const { t } = useTranslation()
+
+    const heroComponents = [
+        <a href="https://uin-malang.ac.id/" target="_blank" rel="noopener noreferrer" className="hero-uni-link"><strong>Maliki Islamic University</strong></a>,
+        <span className="text-accent font-bold" style={{ fontSize: '1.1em' }}>GPA of 3.83</span>,
+        <strong className="text-highlight">digital marketing</strong>,
+        <strong className="text-highlight">SEO</strong>,
+        <strong className="text-highlight">copywriting</strong>,
+        <strong className="text-highlight">content writing</strong>,
+        <strong className="text-highlight">social media marketing</strong>
+    ]
+
     return (
         <section className="hero" id="hero">
             <Aurora />
             <Particles className="hero-particles" particleCount={100} speed={0.4} />
             <div className="hero-content container">
-                <SplitText tag="h1" className="hero-title" text="Hi, I'm Obi" />
+                <SplitText tag="h1" className="hero-title" text={t('hero.greeting')} />
 
                 <p className="hero-desc">
-                    I am a fresh graduate of the bachelor of library and science information program from{' '}
-                    <a href="https://uin-malang.ac.id/" target="_blank" rel="noopener noreferrer" className="hero-uni-link">
-                        <strong>Maliki Islamic University</strong>
-                    </a>{' '}
-                    in Malang with a <span className="text-accent font-bold" style={{ fontSize: '1.1em' }}>GPA of 3.83</span>. I specialized in and developed skills in{' '}
-                    <strong className="text-highlight">digital marketing</strong>, particularly in{' '}
-                    <strong className="text-highlight">SEO</strong>,{' '}
-                    <strong className="text-highlight">copywriting</strong>,{' '}
-                    <strong className="text-highlight">content writing</strong>, and{' '}
-                    <strong className="text-highlight">social media marketing</strong>.
+                    <Trans i18nKey="hero.description" components={heroComponents} />
                 </p>
 
-                <Link to="/contact" className="btn-primary hero-btn">Let's Talk More</Link>
+                <Link to="/contact" className="btn-primary hero-btn">{t('hero.cta')}</Link>
             </div>
         </section>
     )
@@ -61,13 +65,19 @@ function HeroSection() {
 
 /* ───── Logo Ticker ───── */
 function LogoTicker() {
+    // 9 images found in public/photos/LOGO
+    const logos = Array.from({ length: 9 }, (_, i) => `/photos/LOGO/Logo-${i + 1}.webp`)
+
     return (
         <section className="logo-ticker">
             <div className="ticker-track">
-                {/* Doubled list to ensure seamless infinite scroll with -50% animation */}
-                {[...logos, ...logos].map((logoSrc, i) => (
+                {/* 
+                  Doubled list to ensure seamless infinite scroll.
+                  We have 9 items. To be safe for wide screens, let's triple it.
+                */}
+                {[...logos, ...logos, ...logos].map((logoSrc, i) => (
                     <div key={i} className="ticker-item-img">
-                        <img src={logoSrc} alt="Client Logo" />
+                        <img src={logoSrc} alt={`Client Logo ${i + 1}`} />
                     </div>
                 ))}
             </div>
@@ -77,6 +87,8 @@ function LogoTicker() {
 
 /* ───── About / Problem-Solution ───── */
 function AboutProblem() {
+    const { t } = useTranslation()
+
     return (
         <section className="about-problem" id="about-problem">
             <div className="about-problem-container container">
@@ -86,17 +98,18 @@ function AboutProblem() {
                     </GlareCard>
                 </div>
                 <div className="about-problem-text">
-                    <h2 className="about-problem-title">Your sales is not growing?</h2>
-                    {/* Fixed Typography Case */}
-                    <p className="about-problem-subtitle" style={{ textTransform: 'none' }}>It could be because:</p>
+                    <h2 className="about-problem-title">{t('aboutProblem.title')}</h2>
+                    <p className="about-problem-subtitle" style={{ textTransform: 'none' }}>{t('aboutProblem.subtitle')}</p>
                     <ul className="about-problem-list">
-                        <li><span className="bullet"></span> Wordy product descriptions</li>
-                        <li><span className="bullet"></span> Weak CTAs</li>
-                        <li><span className="bullet"></span> Rigid storytelling</li>
-                        <li><span className="bullet"></span> Undescriptive taglines</li>
+                        <li><span className="bullet"></span> {t('aboutProblem.list.wordy')}</li>
+                        <li><span className="bullet"></span> {t('aboutProblem.list.weakCta')}</li>
+                        <li><span className="bullet"></span> {t('aboutProblem.list.rigid')}</li>
+                        <li><span className="bullet"></span> {t('aboutProblem.list.undescriptive')}</li>
                     </ul>
                     <blockquote className="about-problem-quote">
-                        "Getting to know me better might be the <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>right solution for you</span>"
+                        <Trans i18nKey="aboutProblem.quote">
+                            "Getting to know me better might be the <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>right solution for you</span>"
+                        </Trans>
                     </blockquote>
                 </div>
             </div>
@@ -106,10 +119,12 @@ function AboutProblem() {
 
 /* ───── Skills ───── */
 function SkillsSection() {
+    const { t } = useTranslation()
+
     return (
         <section className="section skills-section" id="skills">
             <div className="section-container">
-                <h2 className="section-title">My Skills</h2>
+                <h2 className="section-title">{t('skills.title')}</h2>
                 <div className="skills-grid">
                     {skills.map((skill, i) => (
                         <GlareCard key={i}>
@@ -128,6 +143,7 @@ function SkillsSection() {
 /* ───── Experience (Sticky Left + Timeline Right) ───── */
 function ExperienceSection() {
     const sectionRef = useRef(null)
+    const { t } = useTranslation()
 
     useEffect(() => {
         if (!sectionRef.current) return
@@ -156,27 +172,30 @@ function ExperienceSection() {
         <section className="section experience-section" id="experience" ref={sectionRef}>
             <div className="experience-container">
                 <div className="experience-header">
-                    <h2 className="experience-title">Work</h2>
-                    <p className="experience-subtitle">— experience</p>
+                    <h2 className="experience-title">{t('experience.title')}</h2>
+                    <p className="experience-subtitle">{t('experience.subtitle')}</p>
                     <p className="experience-desc">
-                        I possess diverse experience across various fields tailored to your needs. This is all proof that I am very serious about developing my potential in various things and trying to show the best results that I can
+                        {t('experience.desc')}
                     </p>
                 </div>
                 <div className="experience-timeline">
                     <div className="timeline-line"></div>
-                    {experiences.map((exp, i) => (
-                        <div key={i} className="timeline-item fade-up-element">
-                            <div className={`timeline-dot ${exp.active ? 'active' : ''}`}></div>
-                            <div className="timeline-content">
-                                <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{exp.period}</span>
-                                <h3 className="timeline-role">{exp.title}</h3>
-                                {(Array.isArray(exp.desc) ? exp.desc : [exp.desc]).map((paragraph, pi) => (
-                                    <p key={pi} className="timeline-desc">{paragraph}</p>
-                                ))}
-                                <Carousel slides={7} />
+                    {experiences.map((exp, i) => {
+                        const job = t(`experiences.jobs.${exp.id}`, { returnObjects: true })
+                        return (
+                            <div key={i} className="timeline-item fade-up-element">
+                                <div className={`timeline-dot ${exp.active ? 'active' : ''}`}></div>
+                                <div className="timeline-content">
+                                    <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{job.period}</span>
+                                    <h3 className="timeline-role">{job.title}</h3>
+                                    {(Array.isArray(job.desc) ? job.desc : [job.desc]).map((paragraph, pi) => (
+                                        <p key={pi} className="timeline-desc" dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+                                    ))}
+                                    <Carousel slides={7} images={exp.images} />
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
             </div>
         </section>
@@ -187,6 +206,7 @@ function ExperienceSection() {
 function TestimonialsSection() {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isTransitioning, setIsTransitioning] = useState(true)
+    const { t } = useTranslation()
 
     // Create a circular buffer: [Last, First, ... , Last, First]
     // Actually, for 3-up, we need specific clones. 
@@ -253,7 +273,7 @@ function TestimonialsSection() {
         <section className="testimonials-section" id="testimonials">
             <div className="section-container">
                 <div className="testimonials-header">
-                    <h2 className="section-title-light">What They Say About Me</h2>
+                    <h2 className="section-title-light">{t('testimonials.title')}</h2>
                     <div className="testimonials-nav">
                         <button className="testi-arrow" onClick={handlePrev} aria-label="Previous">
                             <ChevronLeft size={22} />
@@ -300,10 +320,12 @@ function TestimonialsSection() {
 
 /* ───── Blog ───── */
 function BlogSection() {
+    const { t } = useTranslation()
+
     return (
         <section className="section blog-section" id="blog">
             <div className="section-container">
-                <h2 className="section-title blog-title">BLOG</h2>
+                <h2 className="section-title blog-title">{t('blog.title')}</h2>
                 <div className="blog-grid">
                     {blogPosts.map((post, i) => (
                         <article key={i} className="blog-card">
@@ -327,16 +349,18 @@ function BlogSection() {
 
 /* ───── CTA ───── */
 function CTASection() {
+    const { t } = useTranslation()
+
     return (
         <section className="cta-section" id="cta">
             <div className="section-container">
                 <SpotlightCard className="cta-spotlight" spotlightColor="rgba(255, 255, 255, 0.15)">
                     <div className="cta-box-content">
                         <div className="cta-text">
-                            <h2>Let's work together</h2>
-                            <p>Ready to boost your business's digital marketing performance?</p>
+                            <h2>{t('cta.title')}</h2>
+                            <p>{t('cta.desc')}</p>
                         </div>
-                        <Link to="/contact" className="btn-cta">Contact Me</Link>
+                        <Link to="/contact" className="btn-cta">{t('cta.button')}</Link>
                     </div>
                 </SpotlightCard>
             </div>

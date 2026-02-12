@@ -875,22 +875,30 @@ ul {
 
 .carousel-viewport {
     overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
 }
 
 .carousel-slide {
     min-width: 100%;
     flex-shrink: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
 }
 
 .carousel-slide img {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
 }
 
 .carousel-controls {
@@ -2520,12 +2528,14 @@ ul {
 .holala-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.85);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 1.5rem;
 }
 
 .holala-overlay h3 {
@@ -2533,6 +2543,8 @@ ul {
     font-weight: 700;
     transform: translateY(20px);
     transition: transform 0.3s ease;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .holala-item:hover .holala-img-wrapper img {

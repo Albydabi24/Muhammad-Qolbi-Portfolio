@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Instagram, Linkedin, Home, User, Image } from 'lucide-react'
 import { Dock, DockIcon } from './Dock'
+import { useTranslation } from 'react-i18next'
 
 export default function Footer() {
+    const { t } = useTranslation()
+
     return (
         <footer className="footer">
             <div className="section-container">
@@ -14,22 +17,22 @@ export default function Footer() {
                             <Dock magnification={60} distance={100} style={{ gap: '30px' }}>
                                 <DockIcon width={50} magnification={70} className="bg-black/10 dark:bg-white/10 p-2">
                                     <Link to="/" aria-label="Home" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
-                                        Home
+                                        {t('nav.home')}
                                     </Link>
                                 </DockIcon>
                                 <DockIcon width={55} magnification={75} className="bg-black/10 dark:bg-white/10 p-2">
                                     <Link to="/about" aria-label="About" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
-                                        About
+                                        {t('nav.about')}
                                     </Link>
                                 </DockIcon>
                                 <DockIcon width={65} magnification={85} className="bg-black/10 dark:bg-white/10 p-2">
                                     <Link to="/gallery" aria-label="Gallery" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
-                                        Gallery
+                                        {t('nav.gallery')}
                                     </Link>
                                 </DockIcon>
                                 <DockIcon width={65} magnification={85} className="bg-black/10 dark:bg-white/10 p-2">
                                     <Link to="/contact" aria-label="Contact" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
-                                        Contact
+                                        {t('nav.contact')}
                                     </Link>
                                 </DockIcon>
                             </Dock>
@@ -81,10 +84,10 @@ export default function Footer() {
                             <div className="footer-address-text">
                                 <p style={{ lineHeight: '1.8', fontSize: '0.9rem' }}>
                                     <span style={{ color: 'var(--accent)', fontWeight: '800', display: 'block', marginBottom: '0.5rem', fontSize: '1rem' }}>
-                                        Obi's Address
+                                        {t('footer.addressTitle')}
                                     </span>
                                     <span style={{ color: 'rgba(255,255,255,0.8)' }}>
-                                        Jl. Kramat P. Syarief, No. 32, RT/RW 001/008, Kelurahan Lubang Buaya, Kecamatan Cipayung, Jakarta Timur, DKI Jakarta, 13810, Indonesia
+                                        {t('footer.address')}
                                     </span>
                                 </p>
                             </div>
@@ -94,7 +97,7 @@ export default function Footer() {
 
                 {/* Footer Bottom */}
                 <div className="footer-bottom">
-                    <p>&copy; 2026 OBI. All Rights Reserved.</p>
+                    <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
                     <div className="footer-socials">
                         <a href="https://www.instagram.com/biyoosh.i/" target="_blank" rel="noopener noreferrer">Instagram</a>
                         <a href="https://www.linkedin.com/in/muhammad-nurul-qolbi" target="_blank" rel="noopener noreferrer">LinkedIn</a>

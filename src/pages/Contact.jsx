@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import { Mail, Phone, MessageCircle, MapPin, Building2, Navigation, Send, Globe } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 export default function Contact() {
     const [submitted, setSubmitted] = useState(false)
+    const { t } = useTranslation()
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -11,23 +15,24 @@ export default function Contact() {
     }
 
     return (
-        <>
+        <PageTransition>
+            <SEO title="Contact" />
             {/* Contact Hero / Get In Touch */}
             <section className="contact-hero">
                 <div className="section-container">
-                    <h1 className="contact-main-title fade-in">Get In Touch</h1>
+                    <h1 className="contact-main-title fade-in">{t('contactPage.title')}</h1>
 
                     <div className="contact-grid">
                         {/* Left: Contact Info / Channels */}
                         <div className="contact-info fade-in-left">
-                            <h2 className="contact-info-title">Contact</h2>
+                            <h2 className="contact-info-title">{t('contactPage.subtitle')}</h2>
                             <div className="contact-channels">
                                 <a href="mailto:muhammadqolbi00@gmail.com" className="contact-channel">
                                     <div className="channel-icon">
                                         <Mail />
                                     </div>
                                     <div className="channel-detail">
-                                        <span className="channel-label">Email</span>
+                                        <span className="channel-label">{t('contactPage.email')}</span>
                                         <span className="channel-value">muhammadqolbi00@gmail.com</span>
                                     </div>
                                 </a>
@@ -36,7 +41,7 @@ export default function Contact() {
                                         <Phone />
                                     </div>
                                     <div className="channel-detail">
-                                        <span className="channel-label">Phone</span>
+                                        <span className="channel-label">{t('contactPage.phone')}</span>
                                         <span className="channel-value">+6285233142178</span>
                                     </div>
                                 </a>
@@ -45,7 +50,7 @@ export default function Contact() {
                                         <MessageCircle />
                                     </div>
                                     <div className="channel-detail">
-                                        <span className="channel-label">WhatsApp</span>
+                                        <span className="channel-label">{t('contactPage.whatsapp')}</span>
                                         <span className="channel-value">+6285233142178</span>
                                     </div>
                                 </a>
@@ -56,29 +61,29 @@ export default function Contact() {
                         <div className="contact-form-wrapper fade-in-right">
                             {submitted ? (
                                 <div className="contact-success" style={{ padding: '2rem', textAlign: 'center', color: 'var(--accent)' }}>
-                                    <h3>Message Sent!</h3>
-                                    <p>Thank you for contacting me.</p>
+                                    <h3>{t('contactPage.form.successTitle')}</h3>
+                                    <p>{t('contactPage.form.successMessage')}</p>
                                 </div>
                             ) : (
                                 <form className="contact-form" onSubmit={handleSubmit}>
                                     <div className="form-group">
-                                        <label htmlFor="name">Full Name</label>
-                                        <input type="text" id="name" placeholder="Enter your full name" required />
+                                        <label htmlFor="name">{t('contactPage.form.name')}</label>
+                                        <input type="text" id="name" placeholder={t('contactPage.form.namePlaceholder')} required />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="email">Email</label>
-                                        <input type="email" id="email" placeholder="email@example.com" required />
+                                        <label htmlFor="email">{t('contactPage.form.email')}</label>
+                                        <input type="email" id="email" placeholder={t('contactPage.form.emailPlaceholder')} required />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="subject">Subject</label>
-                                        <input type="text" id="subject" placeholder="What is this about?" />
+                                        <label htmlFor="subject">{t('contactPage.form.subject')}</label>
+                                        <input type="text" id="subject" placeholder={t('contactPage.form.subjectPlaceholder')} />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="message">Message</label>
-                                        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                                        <label htmlFor="message">{t('contactPage.form.message')}</label>
+                                        <textarea id="message" rows="5" placeholder={t('contactPage.form.messagePlaceholder')} required></textarea>
                                     </div>
                                     <button type="submit" className="form-submit">
-                                        <span>Send Message</span>
+                                        <span>{t('contactPage.form.send')}</span>
                                         <Send size={18} />
                                     </button>
                                 </form>
@@ -89,6 +94,6 @@ export default function Contact() {
             </section>
 
 
-        </>
+        </PageTransition>
     )
 }
