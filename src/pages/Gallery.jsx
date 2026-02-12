@@ -115,27 +115,33 @@ function OpapaSection() {
                 <div className="opapa-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                    gap: '2rem',
+                    gap: '2.5rem',
                     marginTop: '2rem'
                 }}>
                     {items.map((item, index) => (
                         <div key={item.id} className="opapa-item fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                            <GlareCard className="opapa-card" style={{
-                                position: 'relative',
-                                overflow: 'hidden',
-                                borderRadius: 'var(--radius-md) var(--radius-md) 0 0',
-                                boxShadow: 'var(--shadow-lg)'
-                            }}>
-                                <img src={item.src} alt={item.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} loading="lazy" />
-                            </GlareCard>
-                            <div className="opapa-info" style={{
-                                padding: '1rem',
+                            <div className="opapa-card-inner" style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
                                 background: 'var(--bg-card)',
                                 border: '1px solid var(--border-color)',
-                                borderTop: 'none',
-                                borderRadius: '0 0 var(--radius-md) var(--radius-md)'
+                                borderRadius: 'var(--radius-md)',
+                                overflow: 'hidden',
+                                transition: 'var(--transition)',
+                                boxShadow: 'var(--shadow-md)'
                             }}>
-                                <h4 style={{ margin: 0, fontSize: '1rem' }}>{item.title}</h4>
+                                <div className="opapa-img-wrapper" style={{ flexShrink: 0 }}>
+                                    <img src={item.src} alt={item.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} loading="lazy" />
+                                </div>
+                                <div className="opapa-info" style={{
+                                    padding: '1.25rem',
+                                    flexGrow: 1,
+                                    display: 'flex',
+                                    alignItems: 'flex-start'
+                                }}>
+                                    <h4 style={{ margin: 0, fontSize: '1rem', lineHeight: '1.5', fontWeight: 600 }}>{item.title}</h4>
+                                </div>
                             </div>
                         </div>
                     ))}
