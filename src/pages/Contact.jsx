@@ -6,12 +6,39 @@ import PageTransition from '../components/PageTransition'
 
 export default function Contact() {
     const [submitted, setSubmitted] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
     const { t } = useTranslation()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        setSubmitted(true)
-        setTimeout(() => setSubmitted(false), 3000)
+        setIsSubmitting(true)
+        const formData = new FormData(e.target)
+
+        formData.append("access_key", "40da1596-def3-4041-a84e-eaf30c439cda")
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitted(true)
+                e.target.reset()
+                // Reset success message after 5 seconds if desired, or keep it
+                setTimeout(() => setSubmitted(false), 5000)
+            } else {
+                console.error("Error", data);
+                alert("Something went wrong. Please try again.")
+            }
+        } catch (error) {
+            console.error("Error", error);
+            alert("Something went wrong. Please try again.")
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
@@ -82,9 +109,9 @@ export default function Contact() {
                                         <label htmlFor="message">{t('contactPage.form.message')}</label>
                                         <textarea id="message" rows="5" placeholder={t('contactPage.form.messagePlaceholder')} required></textarea>
                                     </div>
-                                    <button type="submit" className="form-submit">
-                                        <span>{t('contactPage.form.send')}</span>
-                                        <Send size={18} />
+                                    <button type="submit" className="form-submit" disabled={isSubmitting} style={{ opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}>
+                                        <span>{isSubmitting ? 'Sending...' : t('contactPage.form.send')}</span>
+                                        {isSubmitting ? null : <Send size={18} />}
                                     </button>
                                 </form>
                             )}
