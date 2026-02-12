@@ -1760,7 +1760,7 @@ ul {
     font-weight: 900;
     text-align: center;
     color: var(--text-primary);
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
     letter-spacing: -0.03em;
     text-transform: uppercase;
 }
@@ -1934,7 +1934,7 @@ ul {
     font-weight: 900;
     color: var(--text-primary);
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .contact-grid {
@@ -2619,12 +2619,13 @@ ul {
     .experience-grid {
         grid-template-columns: 1fr;
     }
-}/* ─── Gallery Specific Fix ─── */
+}
+
+/* ─── Gallery Specific Fix ─── */
 .gallery-hero-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 900;
     color: var(--text-primary);
 }
 
-.gallery-hero-subtitle {
-}
+.gallery-hero-subtitle {}

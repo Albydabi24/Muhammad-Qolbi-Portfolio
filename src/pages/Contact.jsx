@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Mail, Phone, MessageCircle, MapPin, Building2, Navigation, Send, Globe } from 'lucide-react'
+import SplitText from '../components/SplitText'
 import { useTranslation } from 'react-i18next'
 import SEO from '../components/SEO'
 import PageTransition from '../components/PageTransition'
@@ -48,15 +49,20 @@ export default function Contact() {
             <section className="contact-hero">
                 <div className="section-container">
                     <h1 className="contact-main-title fade-in">{t('contactPage.title')}</h1>
-                    <p className="fade-in" style={{
-                        textAlign: 'center',
-                        maxWidth: '600px',
-                        margin: '0 auto 3rem',
-                        color: 'var(--text-secondary)',
-                        fontSize: '1rem'
-                    }}>
-                        {t('contactPage.subtitleDesc')}
-                    </p>
+                    <div style={{ maxWidth: '600px', margin: '0 auto 3rem', textAlign: 'center' }}>
+                        <SplitText
+                            tag="p"
+                            className=""
+                            text={t('contactPage.subtitleDesc')}
+                            style={{
+                                fontSize: '1rem',
+                                color: 'var(--text-secondary)',
+                                fontWeight: 500,
+                                textAlign: 'center'
+                            }}
+                            delay={20}
+                        />
+                    </div>
 
                     <div className="contact-grid">
                         {/* Left: Contact Info / Channels */}
