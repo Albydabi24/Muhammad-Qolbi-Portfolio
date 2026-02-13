@@ -42,6 +42,11 @@
         "title": "Hall of Proof",
         "desc": "Evidence of impact and transformation from various projects."
     },
+    "fullPortfolio": {
+        "title": "Check My Full Portfolio Here",
+        "label": "PORTFOLIO",
+        "linkText": "Click here to check my full portfolio"
+    },
     "experience": {
         "title": "Work",
         "titleWork": "Work<br/><0>Experience</0>",

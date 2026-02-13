@@ -42,6 +42,11 @@
         "title": "Hall of Proof",
         "desc": "Bukti dampak dan transformasi dari berbagai proyek."
     },
+    "fullPortfolio": {
+        "title": "Cek Portofolio Lengkap Saya Disini",
+        "label": "PORTOFOLIO",
+        "linkText": "Klik di sini untuk melihat portofolio lengkap saya"
+    },
     "experience": {
         "title": "Pengalaman",
         "titleWork": "Pengalaman<br/><0>Kerja</0>",
