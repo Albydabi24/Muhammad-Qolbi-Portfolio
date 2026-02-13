@@ -237,3 +237,14 @@ export const freelanceExperiences = [
         ]
     }
 ]
+
+export const hallOfProof = [
+    { id: 1, title: 'bd-after', src: '/photos/HALL OF PROOF/bd-after.webp' },
+    { id: 2, title: 'bd-before', src: '/photos/HALL OF PROOF/bd-before.webp' },
+    { id: 3, title: 'cc-after', src: '/photos/HALL OF PROOF/cc-after.webp' },
+    { id: 4, title: 'cc-before', src: '/photos/HALL OF PROOF/cc-before.webp' },
+    { id: 5, title: 'joy-after', src: '/photos/HALL OF PROOF/joy-after.webp' },
+    { id: 6, title: 'joy-before', src: '/photos/HALL OF PROOF/joy-before.webp' },
+    { id: 7, title: 'paradicfest-after', src: '/photos/HALL OF PROOF/paradicfest-after.webp' },
+    { id: 8, title: 'paradicfest-before', src: '/photos/HALL OF PROOF/paradicfest-before.webp' },
+]

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import SplitText from '../components/SplitText'
 import GlareCard from '../components/GlareCard'
 import Carousel from '../components/Carousel'
-import { experiences, organizationExperiences, freelanceExperiences } from '../data'
+import { experiences, organizationExperiences, freelanceExperiences, hallOfProof } from '../data'
 import { useTranslation, Trans } from 'react-i18next'
 import SpotlightCard from '../components/SpotlightCard'
 import SEO from '../components/SEO'
@@ -23,6 +23,7 @@ export default function About() {
             <AboutFreelance />
             <AboutEducation />
             <HallOfFame />
+            <HallOfProof />
         </PageTransition>
     )
 }
@@ -286,8 +287,24 @@ function HallOfFame() {
         <section className="hall-of-fame">
             <div className="section-container">
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>{t('hallOfFame.title')}</h2>
-                    <p style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{t('hallOfFame.desc')}</p>
+                    <SplitText
+                        tag="h2"
+                        className="section-title"
+                        text={t('hallOfFame.title')}
+                        style={{ marginBottom: '0.5rem', fontSize: '3.5rem' }}
+                        delay={40}
+                    />
+                    <div style={{ marginTop: '0rem' }}>
+                        <SplitText
+                            tag="p"
+                            text={t('hallOfFame.desc')}
+                            style={{ color: 'var(--text-secondary)', fontWeight: 500, fontSize: '1rem' }}
+                            delay={20}
+                        />
+                    </div>
+                    <div className="scroll-indicator" style={{ marginTop: '1rem' }}>
+                        <div className="scroll-line" style={{ margin: '0 auto' }}></div>
+                    </div>
                 </div>
 
                 {/* Landscape Grid - 2 Cols */}
@@ -305,7 +322,7 @@ function HallOfFame() {
                                         borderRadius: 'var(--radius-md)',
                                         filter: 'none',
                                         opacity: 1,
-                                        transition: 'transfor 0.3s ease'
+                                        transition: 'transform 0.3s ease'
                                     }}
                                 />
                             </div>
@@ -316,10 +333,6 @@ function HallOfFame() {
                 {/* Portrait Grid */}
                 <div className="hof-grid-section">
                     <div className="hof-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
-                        {/* Potrait-2.webp is missing from list, so we map carefully or just try 1..6 and see if browser handles missing gracefully or we skip 2? 
-                            The list was: 1, 3, 4, 5, 6. Total 5. 
-                            Let's use the 5 available images. 
-                        */}
                         {[1, 2, 3, 4, 5, 6].map((num) => (
                             <div key={`P-${num}`} className="hof-item hof-tall" style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}>
                                 <img
@@ -338,6 +351,74 @@ function HallOfFame() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+function HallOfProof() {
+    const { t } = useTranslation()
+
+    return (
+        <section className="hall-of-proof" style={{ marginTop: '5rem' }}>
+            <div className="section-container">
+                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                    <SplitText
+                        tag="h2"
+                        className="section-title"
+                        text={t('hallOfProof.title')}
+                        style={{ marginBottom: '0.5rem', fontSize: '3.5rem' }}
+                        delay={40}
+                    />
+                    <div style={{ marginTop: '0rem' }}>
+                        <SplitText
+                            tag="p"
+                            text={t('hallOfProof.desc')}
+                            style={{ color: 'var(--text-secondary)', fontWeight: 500, fontSize: '1rem' }}
+                            delay={20}
+                        />
+                    </div>
+                    <div className="scroll-indicator" style={{ marginTop: '1rem' }}>
+                        <div className="scroll-line" style={{ margin: '0 auto' }}></div>
+                    </div>
+                </div>
+
+                <div className="hop-grid" style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(4, 1fr)', // 4 items per row
+                    gap: '2.5rem',
+                    marginTop: '2rem'
+                }}>
+                    {hallOfProof.map((item, index) => (
+                        <div key={item.id} className="hop-item fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                            <div className="hop-card-inner" style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                background: 'var(--bg-card)',
+                                border: '1px solid var(--border-color)',
+                                borderRadius: 'var(--radius-md)',
+                                overflow: 'hidden',
+                                transition: 'var(--transition)',
+                                boxShadow: 'var(--shadow-md)'
+                            }}>
+                                <div className="hop-img-wrapper" style={{ flexShrink: 0 }}>
+                                    <GlareCard className="hop-glare-card" style={{ width: '100%', height: '100%', borderRadius: '0' }}>
+                                        <img src={item.src} alt={item.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} loading="lazy" />
+                                    </GlareCard>
+                                </div>
+                                <div className="hop-info" style={{
+                                    padding: '1.25rem',
+                                    flexGrow: 1,
+                                    display: 'flex',
+                                    alignItems: 'flex-start'
+                                }}>
+                                    <h4 style={{ margin: 0, fontSize: '1rem', lineHeight: '1.5', fontWeight: 600 }}>{item.title}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

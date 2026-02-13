@@ -38,6 +38,10 @@
         "title": "Hall of Fame",
         "desc": "Pengakuan dan pencapaian yang menandai perjalanan pertumbuhan dan kontribusi saya."
     },
+    "hallOfProof": {
+        "title": "Hall of Proof",
+        "desc": "Bukti dampak dan transformasi dari berbagai proyek."
+    },
     "experience": {
         "title": "Pengalaman",
         "titleWork": "Pengalaman<br/><0>Kerja</0>",

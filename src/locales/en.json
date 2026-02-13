@@ -38,6 +38,10 @@
         "title": "Hall of Fame",
         "desc": "Recognitions and milestones that mark my journey of growth and contribution."
     },
+    "hallOfProof": {
+        "title": "Hall of Proof",
+        "desc": "Evidence of impact and transformation from various projects."
+    },
     "experience": {
         "title": "Work",
         "titleWork": "Work<br/><0>Experience</0>",
