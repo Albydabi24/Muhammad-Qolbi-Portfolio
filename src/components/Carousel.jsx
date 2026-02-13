@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const DUMMY_IMG = 'https://upload.wikimedia.org/wikipedia/en/f/f8/Dummy_Title_Card.jpeg'
 
 export default function Carousel({ slides = 3, images, className }) {
+    const { t } = useTranslation()
     const actualImages = images && images.length > 0 ? images : Array(slides).fill(DUMMY_IMG)
     const totalSlides = actualImages.length
 
@@ -77,7 +79,7 @@ export default function Carousel({ slides = 3, images, className }) {
                 </div>
             </div>
             <div className="carousel-controls">
-                <button className="carousel-btn carousel-prev" onClick={prev} aria-label="Previous">
+                <button className="carousel-btn carousel-prev" onClick={prev} aria-label={t('carousel.prev')}>
                     <ChevronLeft size={16} />
                 </button>
                 <div className="carousel-dots">
@@ -89,11 +91,11 @@ export default function Carousel({ slides = 3, images, className }) {
                                 setTransitionEnabled(true)
                                 setCurrentIndex(i + 1)
                             }}
-                            aria-label={`Slide ${i + 1}`}
+                            aria-label={t('carousel.slide', { number: i + 1 })}
                         />
                     ))}
                 </div>
-                <button className="carousel-btn carousel-next" onClick={next} aria-label="Next">
+                <button className="carousel-btn carousel-next" onClick={next} aria-label={t('carousel.next')}>
                     <ChevronRight size={16} />
                 </button>
             </div>

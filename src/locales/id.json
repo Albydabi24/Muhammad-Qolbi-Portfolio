@@ -4,17 +4,41 @@
         "about": "Tentang",
         "gallery": "Galeri",
         "contact": "Kontak",
-        "letsTalk": "Ayo Bicara"
+        "letsTalk": "Ayo Bicara",
+        "aria": {
+            "toggleTheme": "Ganti Tema",
+            "toggleLanguage": "Ganti Bahasa",
+            "menu": "Menu"
+        }
     },
     "hero": {
         "greeting": "Hai, Saya Obi",
         "greetingFull": "Halo,<br/> <0>Saya Obi</0>",
         "description": "Saya adalah lulusan baru program sarjana ilmu perpustakaan dan informasi dari <0>Universitas Islam Maliki</0> di Malang dengan <1>IPK 3.83</1>. Saya berspesialisasi dan mengembangkan keterampilan dalam <2>pemasaran digital</2>, khususnya dalam <3>SEO</3>, <4>copywriting</4>, <5>penulisan konten</5>, dan <6>pemasaran media sosial</6>.",
         "descriptionAbout": "Saya adalah lulusan program Sarjana Ilmu Perpustakaan dan Informasi dari Universitas Islam Negeri Maulana Malik Ibrahim Malang dengan IPK 3.83. Selama masa studi, saya berspesialisasi dan mengembangkan keterampilan dalam pemasaran digital, khususnya dalam SEO, copywriting, dan pemasaran media sosial.",
-        "cta": "Bicara Lebih Lanjut"
+        "cta": "Bicara Lebih Lanjut",
+        "components": {
+            "university": "Universitas Islam Negeri Maulana Malik Ibrahim",
+            "gpa": "IPK 3.83",
+            "digitalMarketing": "pemasaran digital",
+            "seo": "SEO",
+            "copywriting": "copywriting",
+            "contentWriting": "penulisan konten",
+            "smm": "pemasaran media sosial"
+        }
     },
     "skills": {
-        "title": "Keahlian"
+        "title": "Keahlian",
+        "list": {
+            "seo": "Search Engine Optimization",
+            "dm": "Digital Marketing",
+            "copy": "Copywriting",
+            "content": "Content Writing",
+            "smm": "Social Media Management",
+            "kol": "Spesialis KOL",
+            "publicSpeaking": "Public Speaking",
+            "vibeCoding": "Vibe Coding"
+        }
     },
     "aboutProblem": {
         "title": "Penjualan Anda tidak tumbuh?",
@@ -57,7 +81,29 @@
     },
     "testimonials": {
         "title": "Apa Kata Mereka Tentang Saya",
-        "desc": "Umpan balik jujur dari rekan kerja dan mentor yang pernah bekerja sama dengan saya."
+        "desc": "Umpan balik jujur dari rekan kerja dan mentor yang pernah bekerja sama dengan saya.",
+        "items": {
+            "client1": {
+                "name": "Klien 1",
+                "text": "\"Sangat profesional dan pekerjaannya melebihi ekspektasi. Strategi yang diberikan sangat membantu bisnis saya berkembang.\""
+            },
+            "client2": {
+                "name": "Klien 2",
+                "text": "\"Obi benar-benar memahami kebutuhan merek kami. Copywriting yang dibuat selalu menarik dan menghasilkan konversi tinggi.\""
+            },
+            "client3": {
+                "name": "Klien 3",
+                "text": "\"Kolaborasi yang luar biasa! Konten yang dihasilkan selalu sesuai merek dan secara signifikan meningkatkan keterlibatan media sosial kami.\""
+            },
+            "client4": {
+                "name": "Klien 4",
+                "text": "\"Strategi yang dijalankan sangat efektif, lalu lintas situs web kami meningkat drastis!\""
+            },
+            "client5": {
+                "name": "Klien 5",
+                "text": "\"Komunikasi lancar dan pengiriman tepat waktu. Sangat merekomendasikan layanan Obi.\""
+            }
+        }
     },
     "gallery": {
         "title": "Galeri",
@@ -77,6 +123,20 @@
             "10": "Photo of the management of the working cabinet of HMPS Library and Information Science administrators in 2022",
             "11": "Material about Organizations at the 2025 HMPS Library Science and Information Training Of Organization event",
             "12": "Reunion and open discussion of all Bank Indonesia Corner (BIC) UIN Malang administrators"
+        },
+        "holalaItems": {
+            "1": "Siaran Pers yang Diterbitkan di Java Times",
+            "2": "Artikel SEO Singkat untuk Buangdisini.com",
+            "3": "Artikel yang Diterbitkan untuk Buangdisini.com",
+            "4": "Kisah Penerima Beasiswa untuk Postingan Instagram Candidate College",
+            "5": "Informasi Carousel untuk Postingan Instagram Candidate College",
+            "6": "Konten Mini Games untuk Postingan Instagram Candidate College",
+            "7": "Jadwal Postingan KOL untuk Konser Peringatan 30 Tahun ASIAN KUNGFU GENERATION",
+            "8": "Daftar Lengkap Bintang Tamu di Konser Paradicfest Vol.2",
+            "9": "Tim Panitia Lengkap Konser Paradicfest Vol.2",
+            "10": "Portal Permintaan Pemasaran (MORPEST) untuk Tim Pemasaran Job on Yours",
+            "11": "All-Mark untuk Tim Pemasaran Job on Yours",
+            "12": "Dasbor Media Sosial (SOSBOARD) untuk Tim Pemasaran Job on Yours"
         }
     },
     "contactPage": {
@@ -96,12 +156,30 @@
             "message": "Pesan",
             "messagePlaceholder": "Tulis pesan Anda di sini...",
             "send": "Kirim Pesan",
+            "sending": "Mengirim...",
             "successTitle": "Pesan Terkirim!",
             "successMessage": "Terima kasih telah menghubungi saya."
         }
     },
     "blog": {
-        "title": "BLOG"
+        "title": "BLOG",
+        "posts": {
+            "post1": {
+                "title": "Saya akan segera menuliskannya",
+                "category": "Artikel",
+                "desc": "Deskripsi singkat tentang isi artikel blog yang dapat menarik perhatian Anda untuk membaca artikel ini."
+            },
+            "post2": {
+                "title": "Saya akan segera menuliskannya",
+                "category": "Artikel",
+                "desc": "Deskripsi singkat tentang isi artikel blog yang dapat menarik perhatian Anda untuk membaca artikel ini."
+            },
+            "post3": {
+                "title": "Saya akan segera menuliskannya",
+                "category": "Artikel",
+                "desc": "Deskripsi singkat tentang isi artikel blog yang dapat menarik perhatian Anda untuk membaca artikel ini."
+            }
+        }
     },
     "cta": {
         "title": "Mari bekerja sama",
@@ -113,6 +191,12 @@
         "addressTitle": "Alamat Obi",
         "address": "Jl. Kramat P. Syarief, No. 32, RT/RW 001/008, Kelurahan Lubang Buaya, Kecamatan Cipayung, Jakarta Timur, DKI Jakarta, 13810, Indonesia"
     },
+    "carousel": {
+        "prev": "Slide sebelumnya",
+        "next": "Slide selanjutnya",
+        "slide": "Slide {{number}}"
+    },
+    "scrollToTop": "Gulir ke atas",
     "notFound": {
         "title": "Halaman Tidak Ditemukan",
         "desc": "Ups! Halaman yang Anda cari sepertinya telah menghilang ke dalam kehampaan digital.",

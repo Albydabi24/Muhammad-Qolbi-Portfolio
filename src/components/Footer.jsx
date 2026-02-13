@@ -16,22 +16,22 @@ export default function Footer() {
                         <nav style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '2rem' }}>
                             <Dock magnification={60} distance={100} style={{ gap: '30px' }}>
                                 <DockIcon width={50} magnification={70} className="bg-black/10 dark:bg-white/10 p-2">
-                                    <Link to="/" aria-label="Home" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
+                                    <Link to="/" aria-label={t('nav.home')} className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
                                         {t('nav.home')}
                                     </Link>
                                 </DockIcon>
                                 <DockIcon width={55} magnification={75} className="bg-black/10 dark:bg-white/10 p-2">
-                                    <Link to="/about" aria-label="About" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
+                                    <Link to="/about" aria-label={t('nav.about')} className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
                                         {t('nav.about')}
                                     </Link>
                                 </DockIcon>
                                 <DockIcon width={65} magnification={85} className="bg-black/10 dark:bg-white/10 p-2">
-                                    <Link to="/gallery" aria-label="Gallery" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
+                                    <Link to="/gallery" aria-label={t('nav.gallery')} className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
                                         {t('nav.gallery')}
                                     </Link>
                                 </DockIcon>
                                 <DockIcon width={65} magnification={85} className="bg-black/10 dark:bg-white/10 p-2">
-                                    <Link to="/contact" aria-label="Contact" className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
+                                    <Link to="/contact" aria-label={t('nav.contact')} className="w-full h-full flex items-center justify-center text-current font-medium text-sm">
                                         {t('nav.contact')}
                                     </Link>
                                 </DockIcon>

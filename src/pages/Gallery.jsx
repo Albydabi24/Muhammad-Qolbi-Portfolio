@@ -58,22 +58,10 @@ function HolalaSection() {
     const { t } = useTranslation()
 
     // 12 Items as requested with specific titles
-    const items = [
-        { id: 1, title: "Published Press Release on Java Times" },
-        { id: 2, title: "Brief SEO Articles for Buangdisini.com" },
-        { id: 3, title: "Published Articles for Buangdisini.com" },
-        { id: 4, title: "Awardee Scholarship Story for Candidate College Instagram Post" },
-        { id: 5, title: "Carousle Information for Candidate College Instagram Post" },
-        { id: 6, title: "Mini Games Content for Candidate College Instagram Post" },
-        { id: 7, title: "KOL Schedulde Post for ASIAN KUNGFU GENERATION 30th Anniversary Concert" },
-        { id: 8, title: "Full List of Guest Star in Paradicfest Vol.2 Concert" },
-        { id: 9, title: "Full Team Commitee of Paradicfest Vol.2 Concert" },
-        { id: 10, title: "Marketing Request Portal (MORPEST) for Job on Yours Marketing Team" },
-        { id: 11, title: "All-Mark for Job on Yours Marketing Team" },
-        { id: 12, title: "Social Media Dashboard (SOSBOARD) for Job on Yours Marketing Team" }
-    ].map(item => ({
-        ...item,
-        src: `/photos/WORK EXPERIENCE/Work-${item.id}.webp`
+    const items = Array.from({ length: 12 }, (_, i) => ({
+        id: i + 1,
+        title: t(`gallery.holalaItems.${i + 1}`),
+        src: `/photos/WORK EXPERIENCE/Work-${i + 1}.webp`
     }))
 
     return (

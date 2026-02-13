@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export default function ScrollToTop() {
     const [isVisible, setIsVisible] = useState(false)
+    const { t } = useTranslation()
 
     // Show button when page is scrolled upto given distance
     const toggleVisibility = () => {
@@ -30,7 +32,7 @@ export default function ScrollToTop() {
     return (
         <div className="scroll-to-top">
             {isVisible && (
-                <button onClick={scrollToTop} className="scroll-btn" aria-label="Scroll to top">
+                <button onClick={scrollToTop} className="scroll-btn" aria-label={t('scrollToTop')}>
                     <ArrowUp size={24} />
                 </button>
             )}

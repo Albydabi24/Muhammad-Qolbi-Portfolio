@@ -1,14 +1,14 @@
 import { Search, TrendingUp, PenTool, BookOpen, Share2, Star, Mic, Code } from 'lucide-react'
 
 export const skills = [
-    { name: 'Search Engine Optimization', Icon: Search },
-    { name: 'Digital Marketing', Icon: TrendingUp },
-    { name: 'Copywriting', Icon: PenTool },
-    { name: 'Content Writing', Icon: BookOpen },
-    { name: 'Social Media Management', Icon: Share2 },
-    { name: 'KOL Specialist', Icon: Star },
-    { name: 'Public Speaking', Icon: Mic },
-    { name: 'Vibe Coding', Icon: Code },
+    { id: 'seo', name: 'Search Engine Optimization', Icon: Search },
+    { id: 'dm', name: 'Digital Marketing', Icon: TrendingUp },
+    { id: 'copy', name: 'Copywriting', Icon: PenTool },
+    { id: 'content', name: 'Content Writing', Icon: BookOpen },
+    { id: 'smm', name: 'Social Media Management', Icon: Share2 },
+    { id: 'kol', name: 'KOL Specialist', Icon: Star },
+    { id: 'publicSpeaking', name: 'Public Speaking', Icon: Mic },
+    { id: 'vibeCoding', name: 'Vibe Coding', Icon: Code },
 ]
 
 export const experiences = [
@@ -128,17 +128,17 @@ export const organizationExperiences = [
 ]
 
 export const testimonials = [
-    { name: 'Client 1', text: '"Very professional and the work exceeded expectations. The provided strategy greatly helped my business grow."' },
-    { name: 'Client 2', text: '"Obi truly understands our brand needs. The copywriting created is always engaging and generates high conversions."' },
-    { name: 'Client 3', text: '"Amazing collaboration! The content produced is always on-brand and significantly improved our social media engagement."' },
-    { name: 'Client 4', text: '"The executed strategy was very effective, our website traffic increased drastically!"' },
-    { name: 'Client 5', text: '"Smooth communication and timely delivery. Highly recommend Obi\'s services."' },
+    { id: 'client1', name: 'Client 1', text: '"Very professional and the work exceeded expectations. The provided strategy greatly helped my business grow."' },
+    { id: 'client2', name: 'Client 2', text: '"Obi truly understands our brand needs. The copywriting created is always engaging and generates high conversions."' },
+    { id: 'client3', name: 'Client 3', text: '"Amazing collaboration! The content produced is always on-brand and significantly improved our social media engagement."' },
+    { id: 'client4', name: 'Client 4', text: '"The executed strategy was very effective, our website traffic increased drastically!"' },
+    { id: 'client5', name: 'Client 5', text: '"Smooth communication and timely delivery. Highly recommend Obi\'s services."' },
 ]
 
 export const blogPosts = [
-    { title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
-    { title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
-    { title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
+    { id: 'post1', title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
+    { id: 'post2', title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
+    { id: 'post3', title: "I'll write it down soon", category: 'Article', desc: 'A brief description of the contents of the blog article that can attract your attention to reading this article.' },
 ]
 
 export const freelanceExperiences = [

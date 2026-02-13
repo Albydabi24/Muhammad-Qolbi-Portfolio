@@ -144,7 +144,7 @@ export default function Contact() {
                                         <textarea id="message" name="message" rows="5" placeholder={t('contactPage.form.messagePlaceholder')} required></textarea>
                                     </div>
                                     <button type="submit" className="form-submit" disabled={isSubmitting} style={{ opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}>
-                                        <span>{isSubmitting ? 'Sending...' : t('contactPage.form.send')}</span>
+                                        <span>{isSubmitting ? t('contactPage.form.sending') : t('contactPage.form.send')}</span>
                                         {isSubmitting ? null : <Send size={18} />}
                                     </button>
                                 </form>

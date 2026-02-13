@@ -37,13 +37,13 @@ function HeroSection() {
     const { t } = useTranslation()
 
     const heroComponents = [
-        <a href="https://uin-malang.ac.id/" target="_blank" rel="noopener noreferrer" className="hero-uni-link"><strong>Maliki Islamic University</strong></a>,
-        <span className="text-accent font-bold" style={{ fontSize: '1.1em' }}>GPA of 3.83</span>,
-        <strong className="text-highlight">digital marketing</strong>,
-        <strong className="text-highlight">SEO</strong>,
-        <strong className="text-highlight">copywriting</strong>,
-        <strong className="text-highlight">content writing</strong>,
-        <strong className="text-highlight">social media marketing</strong>
+        <a href="https://uin-malang.ac.id/" target="_blank" rel="noopener noreferrer" className="hero-uni-link"><strong>{t('hero.components.university')}</strong></a>,
+        <span className="text-accent font-bold" style={{ fontSize: '1.1em' }}>{t('hero.components.gpa')}</span>,
+        <strong className="text-highlight">{t('hero.components.digitalMarketing')}</strong>,
+        <strong className="text-highlight">{t('hero.components.seo')}</strong>,
+        <strong className="text-highlight">{t('hero.components.copywriting')}</strong>,
+        <strong className="text-highlight">{t('hero.components.contentWriting')}</strong>,
+        <strong className="text-highlight">{t('hero.components.smm')}</strong>
     ]
 
     return (
@@ -131,7 +131,7 @@ function SkillsSection() {
                             <div className="skill-icon-circle">
                                 <skill.Icon size={24} />
                             </div>
-                            <h3 className="skill-name">{skill.name}</h3>
+                            <h3 className="skill-name">{t(`skills.list.${skill.id}`)}</h3>
                         </GlareCard>
                     ))}
                 </div>
@@ -295,7 +295,7 @@ function TestimonialsSection() {
                             transform: `translateX(-${(currentIndex * (100 / extendedTestimonials.length))}%)`,
                             transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none'
                         }}>
-                        {extendedTestimonials.map((t, i) => (
+                        {extendedTestimonials.map((testi, i) => (
                             <div key={i} className="testi-card-item" style={{ flex: `0 0 ${100 / extendedTestimonials.length}%`, maxWidth: `${100 / extendedTestimonials.length}%`, padding: '0 0.8rem' }}>
                                 <div className="testi-card-inner" style={{
                                     height: '100%',
@@ -309,8 +309,8 @@ function TestimonialsSection() {
                                     <div className="testi-avatar" style={{ marginBottom: '1.5rem' }}>
                                         <User size={22} />
                                     </div>
-                                    <p className="testi-text" style={{ flex: 1, marginBottom: '1.5rem' }}>{t.text}</p>
-                                    <h4 className="testi-name">{t.name}</h4>
+                                    <p className="testi-text" style={{ flex: 1, marginBottom: '1.5rem' }}>{t(`testimonials.items.${testi.id}.text`)}</p>
+                                    <h4 className="testi-name">{t(`testimonials.items.${testi.id}.name`)}</h4>
                                 </div>
                             </div>
                         ))}
@@ -338,9 +338,9 @@ function BlogSection() {
                                 </div>
                             </div>
                             <div className="blog-info">
-                                <span className="blog-category">{post.category}</span>
-                                <h3 className="blog-headline">{post.title}</h3>
-                                <p className="blog-excerpt">{post.desc}</p>
+                                <span className="blog-category">{t(`blog.posts.${post.id}.category`)}</span>
+                                <h3 className="blog-headline">{t(`blog.posts.${post.id}.title`)}</h3>
+                                <p className="blog-excerpt">{t(`blog.posts.${post.id}.desc`)}</p>
                             </div>
                         </article>
                     ))}

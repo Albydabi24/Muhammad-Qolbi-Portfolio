@@ -45,11 +45,11 @@ export default function Navbar() {
 
                 <div className="nav-actions">
                     <LanguageSwitcher />
-                    <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+                    <button className="theme-toggle" onClick={toggleTheme} aria-label={t('nav.aria.toggleTheme')}>
                         {theme === 'light' ? <Sun size={18} /> : <Moon size={18} />}
                     </button>
                     <Link to="/contact" className="nav-cta">{t('nav.letsTalk')}</Link>
-                    <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+                    <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label={t('nav.aria.menu')}>
                         {menuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>

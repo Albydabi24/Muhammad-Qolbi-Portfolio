@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 export default function LanguageSwitcher() {
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     const toggleLanguage = () => {
         const newLang = i18n.language === 'en' ? 'id' : 'en';
@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
         <button
             onClick={toggleLanguage}
             className="theme-toggle"
-            aria-label="Toggle Language"
+            aria-label={t('nav.aria.toggleLanguage')}
             style={{ fontSize: '0.9rem', fontWeight: 'bold' }}
         >
             {i18n.language === 'en' ? 'ID' : 'EN'}

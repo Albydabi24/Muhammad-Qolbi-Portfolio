@@ -4,17 +4,41 @@
         "about": "About",
         "gallery": "Gallery",
         "contact": "Contact",
-        "letsTalk": "Let's Talk"
+        "letsTalk": "Let's Talk",
+        "aria": {
+            "toggleTheme": "Toggle Theme",
+            "toggleLanguage": "Toggle Language",
+            "menu": "Menu"
+        }
     },
     "hero": {
         "greeting": "Hi, I'm Obi",
         "greetingFull": "Hello,<br/> <0>I am Obi</0>",
         "description": "I am a fresh graduate of the bachelor of library and science information program from <0>Maliki Islamic University</0> in Malang with a <1>GPA of 3.83</1>. I specialized in and developed skills in <2>digital marketing</2>, particularly in <3>SEO</3>, <4>copywriting</4>, <5>content writing</5>, and <6>social media marketing</6>.",
         "descriptionAbout": "I am a graduate of the Bachelor of Library and Information Science program from Maulana Malik Ibrahim State Islamic University in Malang with a GPA of 3.83. During my studies, I specialized in and developed skills in digital marketing, particularly in SEO, copywriting, and social media marketing.",
-        "cta": "Let's Talk More"
+        "cta": "Let's Talk More",
+        "components": {
+            "university": "Maliki Islamic University",
+            "gpa": "GPA of 3.83",
+            "digitalMarketing": "digital marketing",
+            "seo": "SEO",
+            "copywriting": "copywriting",
+            "contentWriting": "content writing",
+            "smm": "social media marketing"
+        }
     },
     "skills": {
-        "title": "Skills"
+        "title": "Skills",
+        "list": {
+            "seo": "Search Engine Optimization",
+            "dm": "Digital Marketing",
+            "copy": "Copywriting",
+            "content": "Content Writing",
+            "smm": "Social Media Management",
+            "kol": "KOL Specialist",
+            "publicSpeaking": "Public Speaking",
+            "vibeCoding": "Vibe Coding"
+        }
     },
     "aboutProblem": {
         "title": "Your sales is not growing?",
@@ -57,7 +81,29 @@
     },
     "testimonials": {
         "title": "What They Say About Me",
-        "desc": "Honest feedback from colleagues and mentors I've had the privilege to work with."
+        "desc": "Honest feedback from colleagues and mentors I've had the privilege to work with.",
+        "items": {
+            "client1": {
+                "name": "Client 1",
+                "text": "\"Very professional and the work exceeded expectations. The provided strategy greatly helped my business grow.\""
+            },
+            "client2": {
+                "name": "Client 2",
+                "text": "\"Obi truly understands our brand needs. The copywriting created is always engaging and generates high conversions.\""
+            },
+            "client3": {
+                "name": "Client 3",
+                "text": "\"Amazing collaboration! The content produced is always on-brand and significantly improved our social media engagement.\""
+            },
+            "client4": {
+                "name": "Client 4",
+                "text": "\"The executed strategy was very effective, our website traffic increased drastically!\""
+            },
+            "client5": {
+                "name": "Client 5",
+                "text": "\"Smooth communication and timely delivery. Highly recommend Obi's services.\""
+            }
+        }
     },
     "gallery": {
         "title": "Gallery",
@@ -77,6 +123,20 @@
             "10": "Photo of the management of the working cabinet of HMPS Library and Information Science administrators in 2022",
             "11": "Material about Organizations at the 2025 HMPS Library Science and Information Training Of Organization event",
             "12": "Reunion and open discussion of all Bank Indonesia Corner (BIC) UIN Malang administrators"
+        },
+        "holalaItems": {
+            "1": "Published Press Release on Java Times",
+            "2": "Brief SEO Articles for Buangdisini.com",
+            "3": "Published Articles for Buangdisini.com",
+            "4": "Awardee Scholarship Story for Candidate College Instagram Post",
+            "5": "Carousle Information for Candidate College Instagram Post",
+            "6": "Mini Games Content for Candidate College Instagram Post",
+            "7": "KOL Schedule Post for ASIAN KUNGFU GENERATION 30th Anniversary Concert",
+            "8": "Full List of Guest Star in Paradicfest Vol.2 Concert",
+            "9": "Full Team Commitee of Paradicfest Vol.2 Concert",
+            "10": "Marketing Request Portal (MORPEST) for Job on Yours Marketing Team",
+            "11": "All-Mark for Job on Yours Marketing Team",
+            "12": "Social Media Dashboard (SOSBOARD) for Job on Yours Marketing Team"
         }
     },
     "contactPage": {
@@ -96,12 +156,30 @@
             "message": "Message",
             "messagePlaceholder": "Write your message here...",
             "send": "Send Message",
+            "sending": "Sending...",
             "successTitle": "Message Sent!",
             "successMessage": "Thank you for contacting me."
         }
     },
     "blog": {
-        "title": "BLOG"
+        "title": "BLOG",
+        "posts": {
+            "post1": {
+                "title": "I'll write it down soon",
+                "category": "Article",
+                "desc": "A brief description of the contents of the blog article that can attract your attention to reading this article."
+            },
+            "post2": {
+                "title": "I'll write it down soon",
+                "category": "Article",
+                "desc": "A brief description of the contents of the blog article that can attract your attention to reading this article."
+            },
+            "post3": {
+                "title": "I'll write it down soon",
+                "category": "Article",
+                "desc": "A brief description of the contents of the blog article that can attract your attention to reading this article."
+            }
+        }
     },
     "cta": {
         "title": "Let's work together",
@@ -113,6 +191,12 @@
         "addressTitle": "Obi's Address",
         "address": "Jl. Kramat P. Syarief, No. 32, RT/RW 001/008, Kelurahan Lubang Buaya, Kecamatan Cipayung, Jakarta Timur, DKI Jakarta, 13810, Indonesia"
     },
+    "carousel": {
+        "prev": "Previous slide",
+        "next": "Next slide",
+        "slide": "Slide {{number}}"
+    },
+    "scrollToTop": "Scroll to top",
     "notFound": {
         "title": "Page Not Found",
         "desc": "Oops! The page you are looking for seems to have wandered off into the digital void.",
