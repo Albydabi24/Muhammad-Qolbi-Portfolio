@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, Phone, MessageCircle, MapPin, Building2, Navigation, Send, Globe } from 'lucide-react'
+import { Mail, Phone, MessageCircle, MapPin, Building2, Navigation, Send, Globe, Briefcase } from 'lucide-react'
 import SplitText from '../components/SplitText'
 import { useTranslation } from 'react-i18next'
 import SEO from '../components/SEO'
@@ -94,6 +94,25 @@ export default function Contact() {
                                     <div className="channel-detail">
                                         <span className="channel-label">{t('contactPage.whatsapp')}</span>
                                         <span className="channel-value">+6285233142178</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            {/* Full Portfolio Link */}
+                            <div className="full-portfolio-section" style={{ marginTop: '2rem' }}>
+                                <h3 className="contact-info-title" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{t('fullPortfolio.title')}</h3>
+                                <a
+                                    href="https://www.canva.com/design/DAGxvWaxGqU/Q8ZIohJtNHus6PaYpm_Ggg/view?utm_content=DAGxvWaxGqU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha48507c05f"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="contact-channel"
+                                >
+                                    <div className="channel-icon">
+                                        <Briefcase />
+                                    </div>
+                                    <div className="channel-detail">
+                                        <span className="channel-label">{t('fullPortfolio.label')}</span>
+                                        <span className="channel-value">{t('fullPortfolio.linkText')}</span>
                                     </div>
                                 </a>
                             </div>

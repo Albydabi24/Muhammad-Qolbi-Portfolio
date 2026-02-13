@@ -24,7 +24,6 @@ export default function About() {
             <AboutEducation />
             <HallOfFame />
             <HallOfProof />
-            <FullPortfolioSection />
         </PageTransition>
     )
 }
@@ -426,46 +425,7 @@ function HallOfProof() {
     )
 }
 
-function FullPortfolioSection() {
-    const { t } = useTranslation()
 
-    return (
-        <section className="full-portfolio-section" style={{ paddingBottom: '5rem' }}>
-            <div className="section-container">
-                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <div className="scroll-indicator" style={{ marginBottom: '2rem' }}>
-                        <div className="scroll-line" style={{ margin: '0 auto' }}></div>
-                    </div>
-                    <SplitText
-                        tag="h2"
-                        className="section-title"
-                        text={t('fullPortfolio.title')}
-                        style={{ fontSize: '2.5rem', marginBottom: '2rem' }}
-                        delay={40}
-                    />
-                </div>
-
-                <div className="full-portfolio-card-wrapper" style={{ maxWidth: '600px', margin: '0 auto' }}>
-                    <a
-                        href="https://www.canva.com/design/DAGxvWaxGqU/Q8ZIohJtNHus6PaYpm_Ggg/view?utm_content=DAGxvWaxGqU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha48507c05f"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="contact-channel"
-                        style={{ width: '100%', textDecoration: 'none', display: 'flex', alignItems: 'center', padding: '1.5rem', background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-                    >
-                        <div className="channel-icon" style={{ marginRight: '1.5rem', color: 'var(--accent)' }}>
-                            <Briefcase size={32} />
-                        </div>
-                        <div className="channel-detail" style={{ display: 'flex', flexDirection: 'column' }}>
-                            <span className="channel-label" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text-secondary)', letterSpacing: '0.05em', marginBottom: '0.25rem' }}>{t('fullPortfolio.label')}</span>
-                            <span className="channel-value" style={{ fontSize: '1.125rem', fontWeight: 600, color: 'var(--text-primary)' }}>{t('fullPortfolio.linkText')}</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    );
-}
 
 function CTASection() {
     const { t } = useTranslation()
