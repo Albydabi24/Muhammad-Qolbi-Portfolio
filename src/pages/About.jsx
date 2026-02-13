@@ -291,7 +291,7 @@ function HallOfFame() {
                         tag="h2"
                         className="section-title"
                         text={t('hallOfFame.title')}
-                        style={{ marginBottom: '0.5rem', fontSize: '3.5rem' }}
+                        style={{ marginBottom: '0rem', fontSize: '3.5rem' }}
                         delay={40}
                     />
                     <div style={{ marginTop: '0rem' }}>
@@ -361,14 +361,14 @@ function HallOfProof() {
     const { t } = useTranslation()
 
     return (
-        <section className="hall-of-proof" style={{ marginTop: '5rem' }}>
+        <section className="hall-of-proof" style={{ marginTop: '5rem', paddingBottom: '5rem' }}>
             <div className="section-container">
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <SplitText
                         tag="h2"
                         className="section-title"
                         text={t('hallOfProof.title')}
-                        style={{ marginBottom: '0.5rem', fontSize: '3.5rem' }}
+                        style={{ marginBottom: '0rem', fontSize: '3.5rem' }}
                         delay={40}
                     />
                     <div style={{ marginTop: '0rem' }}>
