@@ -5,7 +5,7 @@ import SplitText from '../components/SplitText'
 import Aurora from '../components/Aurora'
 import GlareCard from '../components/GlareCard'
 import Carousel from '../components/Carousel'
-import Particles from '../components/Particles'
+import FloatingOrbsBackground from '../components/ApexUI-Kit/OrbsBackground/FloatingOrbs'
 import SpotlightCard from '../components/SpotlightCard'
 import { skills, experiences, testimonials, blogPosts } from '../data'
 import { useTranslation, Trans } from 'react-i18next'
@@ -49,7 +49,7 @@ function HeroSection() {
     return (
         <section className="hero" id="hero">
             <Aurora />
-            <Particles className="hero-particles" particleCount={100} speed={0.4} />
+            <FloatingOrbsBackground className="hero-particles" containerClassName="absolute inset-0 z-0" />
             <div className="hero-content container">
                 <SplitText tag="h1" className="hero-title" text={t('hero.greeting')} />
 
