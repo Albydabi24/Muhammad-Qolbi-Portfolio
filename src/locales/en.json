@@ -77,7 +77,9 @@
         "titleOrg": "Organization &<br/><0>Volunteer Experience</0>",
         "titleFreelance": "Freelance &<br/><0>Project Experience</0>",
         "subtitle": "— experience",
-        "desc": "I possess diverse experience across various fields tailored to your needs. This is all proof that I am very serious about developing my potential in various things and trying to show the best results that I can"
+        "desc": "I possess diverse experience across various fields tailored to your needs. This is all proof that I am very serious about developing my potential in various things and trying to show the best results that I can",
+        "keyResponsibilities": "Key responsibilities :",
+        "keyAchievement": "Key Achievement :"
     },
     "testimonials": {
         "title": "What They Say About Me",

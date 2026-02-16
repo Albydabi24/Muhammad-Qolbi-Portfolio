@@ -189,8 +189,16 @@ function ExperienceSection() {
                                     <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{job.period}</span>
                                     <h3 className="timeline-role">{job.title}</h3>
                                     {/* Key Responsibilities & Achievement */}
-                                    <div style={{ marginBottom: '0.8rem', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.4' }}>
-                                        {job.key_responsibilities} {job.key_achievement ? `| ${job.key_achievement}` : ''}
+                                    <div style={{ marginBottom: '0.8rem', lineHeight: '1.4' }}>
+                                        <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{t('experience.keyResponsibilities')} </span>
+                                        <span>{job.key_responsibilities}</span>
+                                        {job.key_achievement && (
+                                            <>
+                                                <span style={{ margin: '0 0.5rem', opacity: 0.7 }}>|</span>
+                                                <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{t('experience.keyAchievement')} </span>
+                                                <span>{job.key_achievement}</span>
+                                            </>
+                                        )}
                                     </div>
                                     {(Array.isArray(job.desc) ? job.desc : [job.desc]).map((paragraph, pi) => (
                                         <p key={pi} className="timeline-desc" dangerouslySetInnerHTML={{ __html: paragraph }}></p>

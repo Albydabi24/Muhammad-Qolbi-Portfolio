@@ -101,8 +101,16 @@ function AboutWorkExperience() {
                                     <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{job.period}</span>
                                     <h3 className="timeline-role">{job.title}</h3>
                                     {/* Key Responsibilities & Achievement */}
-                                    <div style={{ marginBottom: '0.8rem', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.4' }}>
-                                        {job.key_responsibilities} {job.key_achievement ? `| ${job.key_achievement}` : ''}
+                                    <div style={{ marginBottom: '0.8rem', lineHeight: '1.4' }}>
+                                        <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{t('experience.keyResponsibilities')} </span>
+                                        <span>{job.key_responsibilities}</span>
+                                        {job.key_achievement && (
+                                            <>
+                                                <span style={{ margin: '0 0.5rem', opacity: 0.7 }}>|</span>
+                                                <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{t('experience.keyAchievement')} </span>
+                                                <span>{job.key_achievement}</span>
+                                            </>
+                                        )}
                                     </div>
                                     <div className="experience-grid">
                                         <div className="timeline-text">
@@ -168,8 +176,16 @@ function AboutOrgVolunteer() {
                                     <span className={`timeline-year ${exp.active ? 'active' : ''}`} style={{ color: 'var(--accent)' }}>{org.period}</span>
                                     <h3 className="timeline-role">{org.title}</h3>
                                     {/* Key Responsibilities & Achievement */}
-                                    <div style={{ marginBottom: '0.8rem', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.4' }}>
-                                        {org.key_responsibilities} {org.key_achievement ? `| ${org.key_achievement}` : ''}
+                                    <div style={{ marginBottom: '0.8rem', lineHeight: '1.4' }}>
+                                        <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{t('experience.keyResponsibilities')} </span>
+                                        <span>{org.key_responsibilities}</span>
+                                        {org.key_achievement && (
+                                            <>
+                                                <span style={{ margin: '0 0.5rem', opacity: 0.7 }}>|</span>
+                                                <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{t('experience.keyAchievement')} </span>
+                                                <span>{org.key_achievement}</span>
+                                            </>
+                                        )}
                                     </div>
                                     <div className="experience-grid">
                                         <div className="timeline-text">
@@ -232,8 +248,16 @@ function AboutFreelance() {
                                     <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{freelance.period}</span>
                                     <h3 className="timeline-role">{freelance.title}</h3>
                                     {/* Key Responsibilities & Achievement */}
-                                    <div style={{ marginBottom: '0.8rem', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.4' }}>
-                                        {freelance.key_responsibilities} {freelance.key_achievement ? `| ${freelance.key_achievement}` : ''}
+                                    <div style={{ marginBottom: '0.8rem', lineHeight: '1.4' }}>
+                                        <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{t('experience.keyResponsibilities')} </span>
+                                        <span>{freelance.key_responsibilities}</span>
+                                        {freelance.key_achievement && (
+                                            <>
+                                                <span style={{ margin: '0 0.5rem', opacity: 0.7 }}>|</span>
+                                                <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{t('experience.keyAchievement')} </span>
+                                                <span>{freelance.key_achievement}</span>
+                                            </>
+                                        )}
                                     </div>
                                     <div className="experience-grid">
                                         <div className="timeline-text">
