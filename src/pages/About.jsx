@@ -100,6 +100,10 @@ function AboutWorkExperience() {
                                 <div className="timeline-content">
                                     <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{job.period}</span>
                                     <h3 className="timeline-role">{job.title}</h3>
+                                    {/* Key Responsibilities & Achievement */}
+                                    <div style={{ marginBottom: '0.8rem', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.4' }}>
+                                        {job.key_responsibilities} {job.key_achievement ? `| ${job.key_achievement}` : ''}
+                                    </div>
                                     <div className="experience-grid">
                                         <div className="timeline-text">
                                             {(Array.isArray(job.desc) ? job.desc : [job.desc]).map((paragraph, pi) => (
@@ -163,6 +167,10 @@ function AboutOrgVolunteer() {
                                 <div className="timeline-content">
                                     <span className={`timeline-year ${exp.active ? 'active' : ''}`} style={{ color: 'var(--accent)' }}>{org.period}</span>
                                     <h3 className="timeline-role">{org.title}</h3>
+                                    {/* Key Responsibilities & Achievement */}
+                                    <div style={{ marginBottom: '0.8rem', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.4' }}>
+                                        {org.key_responsibilities} {org.key_achievement ? `| ${org.key_achievement}` : ''}
+                                    </div>
                                     <div className="experience-grid">
                                         <div className="timeline-text">
                                             {(Array.isArray(org.desc) ? org.desc : [org.desc]).map((paragraph, pi) => (
@@ -223,6 +231,10 @@ function AboutFreelance() {
                                 <div className="timeline-content">
                                     <span className={`timeline-year ${exp.active ? 'active' : ''}`}>{freelance.period}</span>
                                     <h3 className="timeline-role">{freelance.title}</h3>
+                                    {/* Key Responsibilities & Achievement */}
+                                    <div style={{ marginBottom: '0.8rem', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.4' }}>
+                                        {freelance.key_responsibilities} {freelance.key_achievement ? `| ${freelance.key_achievement}` : ''}
+                                    </div>
                                     <div className="experience-grid">
                                         <div className="timeline-text">
                                             {(Array.isArray(freelance.desc) ? freelance.desc : [freelance.desc]).map((paragraph, pi) => (
