@@ -179,6 +179,18 @@ export const freelanceExperiences = [
         ]
     },
     {
+        id: 'tot',
+        images: [
+            '/photos/TOT/ToT-1.webp',
+            '/photos/TOT/ToT-2.webp',
+            '/photos/TOT/ToT-3.webp',
+            '/photos/TOT/ToT-4.webp',
+            '/photos/TOT/ToT-5.webp',
+            '/photos/TOT/ToT-6.webp',
+            '/photos/TOT/ToT-7.webp'
+        ]
+    },
+    {
         id: 'email',
         images: [
             '/photos/EMAIL/Email-1.webp',
